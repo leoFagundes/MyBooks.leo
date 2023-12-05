@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { SiBookmyshow } from "react-icons/si"
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 import { Title } from './Title.styled'
 
 const NavContainer = styled.nav`
@@ -18,7 +18,6 @@ const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 `
 
 const NavItemContainer = styled.ul`
@@ -33,7 +32,6 @@ const NavItemContainer = styled.ul`
       text-align: center;
       font-weight: 600;
       color: ${(props) => props.color || '#fff'};
-      font-family: 'Montserrat', sans-serif;
     }
   }
 `
@@ -43,7 +41,7 @@ export default function NavBar() {
     <NavContainer>
       <LogoContainer>
         <SiBookmyshow size={55} />
-        <Title><i>Books.leo</i></Title>
+        <Title fontFamily="'Hedvig Letters Serif', serif;"><i>Books.leo</i></Title>
       </LogoContainer>
       <NavItemContainer>
         <a href=""><li>MyBookLine</li></a>

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -26,7 +28,6 @@ body {
   --sh: rgba(99, 99, 99, 0.4);
   --sh2: rgba(255, 1, 1, 0.133);
   --gp: 50%/ calc(var(--u) * 2) calc(var(--u) * 2);
-  height: 100vh;
 background:    
   conic-gradient(from -10deg at 60% 0%, #fff0 0 25%, var(--sh2) 28%, #fff0 31% 100%) var(--gp), 
   conic-gradient(from -5deg at 0% calc(60% - 1px), #fff0 0, var(--sh) 0%, #fff0 4% 100%) var(--gp),    
@@ -41,18 +42,17 @@ background:
 }
 
 main {
+  display: flex;
+  justify-content: center;
   height: 100%;
   width: 100%;
-  opacity: 0.95;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 li {
   list-style: none;
+}
+
+li, p {
+  font-family: 'Montserrat', sans-serif;
 }
 
