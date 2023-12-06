@@ -15,7 +15,7 @@ const HeaderContainer = styled.header`
     margin-bottom: 5px;
   }
 
-  p {
+  & > p {
     margin: 0;
     width: 80%;
     font-size: 20px;
@@ -91,14 +91,40 @@ const SectionContainer = styled.section`
   padding: 20px;
 `;
 
+const DivFilterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 320px;
+  background-color: #55555529;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #afafaf36;
+  padding: 5px;
+  margin: 5px;
+
+  h1 {
+    margin: 0;
+    align-self: center;
+  }
+
+  p {
+    align-self: flex-start;
+    font-size: 18px;
+  }
+`
+
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("");
+  const [filterValue, setFilterValue] = useState("")
 
   useEffect(() => {
-    console.log(inputValue);
-    // Aqui você pode realizar a lógica de filtro com base nos dois valores
-  }, [inputValue]);
+    console.log(inputValue, selectedGenre);
+
+    setFilterValue(`<strong>Contém:</strong> ${inputValue ? inputValue : 'Empty Value'}</br><strong>Gênero:</strong> ${selectedGenre ? selectedGenre : 'Empty Value'}`)
+
+    
+  }, [inputValue, selectedGenre]);
 
   // Extrai gêneros únicos dos dados dos livros
   const uniqueGenres = Array.from(
@@ -142,6 +168,10 @@ export default function Home() {
           </select>
         </div>
       </InputContainer>
+      <DivFilterContainer>
+        <Title fontFamily="'Hedvig Letters Serif', serif;" fontSize="150%" color="#fff">Filtros</Title>
+        <p dangerouslySetInnerHTML={{ __html: filterValue }} />
+      </DivFilterContainer>
       <SectionContainer>
         {dataBooks.map((livro) => (
           <div key={livro.nome}>
