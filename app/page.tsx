@@ -5,6 +5,10 @@ import styled from "styled-components";
 import { dataBooks } from "@/components/dataBooks";
 import { useEffect, useState } from "react";
 
+interface BookProps {
+  backGroundImage: string;
+}
+
 const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
@@ -81,11 +85,14 @@ const InputContainer = styled.div`
 `;
 
 const SectionContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   margin: 30px 0;
   min-width: 320px;
   min-height: 400px;
-  background-color: white;
+  background-color: #f8f9fa;
   border-radius: 15px;
   color: black;
   padding: 20px;
@@ -111,24 +118,76 @@ const DivFilterContainer = styled.div`
     align-self: flex-start;
     font-size: 18px;
   }
-`
+`;
+
+const BookContainer = styled.div`
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+`;
+
+const Card = styled.div<{ flipped: boolean }>`
+  width: 300px;
+  height: 450px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  transform: ${(props) => (props.flipped ? "rotateY(180deg)" : "rotateY(0deg)")};
+  margin: 10px 20px;
+`;
+
+const Front = styled.div<BookProps>`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-image: url(${(props) => props.backGroundImage});
+  background-size: cover;
+  border-radius: 5px;
+`;
+
+const Back = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background-color: #000000;
+  border-radius: 5px;
+`;
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("");
-  const [filterValue, setFilterValue] = useState("")
+  const [filterValue, setFilterValue] = useState("");
+  const [flippedCards, setFlippedCards] = useState<string[]>([]);
+
+  const handleBookClick = (bookId: string) => {
+    setFlippedCards((prevFlippedCards) => {
+      if (prevFlippedCards.includes(bookId)) {
+        return prevFlippedCards.filter((id) => id !== bookId);
+      } else {
+        return [...prevFlippedCards, bookId];
+      }
+    });
+  };
+
+  console.log(flippedCards)
 
   useEffect(() => {
     console.log(inputValue, selectedGenre);
 
-    setFilterValue(`<strong>Contém:</strong> ${inputValue ? inputValue : 'Empty Value'}</br><strong>Gênero:</strong> ${selectedGenre ? selectedGenre : 'Empty Value'}`)
-
-    
+    setFilterValue(
+      `<strong>Contém:</strong> ${
+        inputValue ? inputValue : "Empty Value"
+      }</br><strong>Gênero:</strong> ${
+        selectedGenre ? selectedGenre : "Empty Value"
+      }`
+    );
   }, [inputValue, selectedGenre]);
 
   // Extrai gêneros únicos dos dados dos livros
   const uniqueGenres = Array.from(
-    new Set(dataBooks.map((livro) => livro.genero))
+    new Set(dataBooks.flatMap((livro) => livro.genre))
   );
 
   return (
@@ -169,21 +228,34 @@ export default function Home() {
         </div>
       </InputContainer>
       <DivFilterContainer>
-        <Title fontFamily="'Hedvig Letters Serif', serif;" fontSize="150%" color="#fff">Filtros</Title>
+        <Title
+          fontFamily="'Hedvig Letters Serif', serif;"
+          fontSize="150%"
+          color="#fff"
+        >
+          Filtros
+        </Title>
         <p dangerouslySetInnerHTML={{ __html: filterValue }} />
       </DivFilterContainer>
       <SectionContainer>
-        {dataBooks.map((livro) => (
-          <div key={livro.nome}>
-            {livro.nome.toLowerCase().includes(inputValue.toLowerCase()) &&
-            (selectedGenre === "" || selectedGenre === livro.genero) ? (
-              <p>{livro.nome}</p>
-            ) : (
-              ""
-            )}
-          </div>
-        ))}
-      </SectionContainer>
+      {dataBooks.map((livro) => (
+        <div key={livro.name}>
+          {livro.name.toLowerCase().includes(inputValue.toLowerCase()) &&
+          (selectedGenre.length === 0 || livro.genre.includes(selectedGenre)) ? (
+            <BookContainer onClick={() => handleBookClick(livro.name)}>
+              <Card flipped={flippedCards.includes(livro.name)}>
+                <Front backGroundImage="images/books/verity.png" />
+                <Back>
+                  teste
+                </Back>
+              </Card>
+            </BookContainer>
+          ) : (
+            ""
+          )}
+        </div>
+      ))}
+    </SectionContainer>
     </HeaderContainer>
   );
 }

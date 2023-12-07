@@ -1,38 +1,42 @@
 export const dataBooks = [
     {
-        nome: 'teste',
-        desc: 'desc',
-        genero: 'Financeiro',
-        anoConclusao: 'teste',
-        img: 'teste',
-        pdf: 'pdf',
-        rate: 'teste'
+        name: 'Verity',
+        desc: 'descdescdescdesc',
+        genre: ['Thriller', 'Romance', 'Mystery', 'Fiction', 'Mystery', 'Suspense', 'Contemporary', 'Adult', 'Dark'],
+        year: '2023',
+        img: 'verity.png',
+        pdf: 'verity.pdf',
+        rate: 'teste',
+        author: 'Colleen Hoover'
     },
     {
-        nome: 'cabecudo',
+        name: 'cabecudo',
         desc: 'desc',
-        genero: 'Financeiro',
-        anoConclusao: 'teste',
+        genre: ['teste'],
+        year: '2023',
         img: 'teste',
         pdf: 'pdf',
-        rate: 'teste'
+        rate: 'teste',
+        author: ''
     },
     {
-        nome: 'teste',
+        name: 'teste',
         desc: 'desc',
-        genero: 'Ficção',
-        anoConclusao: 'teste',
+        genre: ['teste'],
+        year: 'teste',
         img: 'teste',
         pdf: 'pdf',
-        rate: 'teste'
+        rate: 'teste',
+        author: ''
     },
     {
-        nome: 'joaninha',
+        name: 'joaninha',
         desc: 'desc',
-        genero: 'Ação',
-        anoConclusao: 'teste',
+        genre: ['teste'],
+        year: 'teste',
         img: 'teste',
         pdf: 'pdf',
-        rate: 'teste'
+        rate: 'teste',
+        author: ''
     },
 ]
