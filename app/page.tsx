@@ -118,8 +118,8 @@ export default function Home() {
                       <div>
                         <span>Gênero:</span>
                         <ul>
-                          {livro.genre.map((e) => (
-                            <li>
+                          {livro.genre.map((e, index) => (
+                            <li key={index}>
                               <p>- {e}</p>
                             </li>
                           ))}
