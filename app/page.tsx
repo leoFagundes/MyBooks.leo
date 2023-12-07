@@ -107,7 +107,7 @@ export default function Home() {
                 <Card flipped={flippedCards.includes(livro.name)}>
                   <Front backGroundImage={`images/books/${livro.img}`} />
                   <Back>
-                    <Title fontFamily="'Hedvig Letters Serif', serif;">
+                    <Title fontSize="150%" fontFamily="'Hedvig Letters Serif', serif;">
                       {livro.name}
                     </Title>
                     <div className="bookDesc">

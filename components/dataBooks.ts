@@ -32,7 +32,7 @@ export const dataBooks = [
         - E, sobretudo, cultivar as próprias aptidões, tornando-se cada vez mais consciente e habilidoso.
         `,
         genre: ['Economics', 'Business', 'Self-Help', 'Classics'],
-        img: 'O homem mais rico da Babilonia.png',
+        img: 'O_homem_mais_rico_da_Babilonia.png',
         pdf: 'O homem mais rico da Babilonia.pdf',
         rate: '8',
         author: 'George S Clason'
