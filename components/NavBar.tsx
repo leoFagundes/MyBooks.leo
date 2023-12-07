@@ -40,7 +40,7 @@ export default function NavBar() {
   return (
     <NavContainer>
       <LogoContainer>
-        <SiBookmyshow size={55} />
+        <SiBookmyshow size={55} color={'#fff'}/>
         <Title fontFamily="'Hedvig Letters Serif', serif;"><i>Books.leo</i></Title>
       </LogoContainer>
       <NavItemContainer>
