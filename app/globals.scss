@@ -39,6 +39,7 @@ background:
   linear-gradient(90deg, #fff0 10%, var(--c2) 10% 50%, #fff0 50% 100%) var(--gp),   
   linear-gradient(180deg, #fff0 60%, var(--c1) 60% 100%) var(--gp),   
   #2e2e2e;
+  -webkit-tap-highlight-color: transparent;
 }
 
 main {

@@ -4,7 +4,16 @@ import { Title } from "@/components/Title.styled";
 import styled from "styled-components";
 import { dataBooks } from "@/components/dataBooks";
 import { useEffect, useState } from "react";
-import { HeaderContainer, InputContainer, SectionContainer, DivFilterContainer, BookContainer, Card, Front, Back } from "./styled"
+import {
+  HeaderContainer,
+  InputContainer,
+  SectionContainer,
+  DivFilterContainer,
+  BookContainer,
+  Card,
+  Front,
+  Back,
+} from "./styled";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
@@ -22,7 +31,7 @@ export default function Home() {
     });
   };
 
-  console.log(flippedCards)
+  console.log(flippedCards);
 
   useEffect(() => {
     console.log(inputValue, selectedGenre);
@@ -89,44 +98,55 @@ export default function Home() {
         <p dangerouslySetInnerHTML={{ __html: filterValue }} />
       </DivFilterContainer>
       <SectionContainer>
-      {dataBooks.map((livro) => (
-        <div key={livro.name}>
-          {livro.name.toLowerCase().includes(inputValue.toLowerCase()) &&
-          (selectedGenre.length === 0 || livro.genre.includes(selectedGenre)) ? (
-            <BookContainer onClick={() => handleBookClick(livro.name)}>
-              <Card flipped={flippedCards.includes(livro.name)}>
-                <Front backGroundImage="images/books/verity.png" />
-                <Back>
-                  <Title fontFamily="'Hedvig Letters Serif', serif;">{livro.name}</Title>
-                  <div className="bookDesc">{livro.desc}</div>
-                  
-                  <section className="bodyCard">
-                    <div className="genero">
-                      <ul>
-                        <span>Gênero:</span><br/>
-                        {livro.genre.map(e => (
-                          <li>
-                            <p>- {e}</p>
-                          </li>
-                        ))}
-                      </ul>
+        {dataBooks.map((livro) => (
+          <div key={livro.name}>
+            {livro.name.toLowerCase().includes(inputValue.toLowerCase()) &&
+            (selectedGenre.length === 0 ||
+              livro.genre.includes(selectedGenre)) ? (
+              <BookContainer onClick={() => handleBookClick(livro.name)}>
+                <Card flipped={flippedCards.includes(livro.name)}>
+                  <Front backGroundImage={`images/books/${livro.img}`} />
+                  <Back>
+                    <Title fontFamily="'Hedvig Letters Serif', serif;">
+                      {livro.name}
+                    </Title>
+                    <div className="bookDesc">
+                      <p dangerouslySetInnerHTML={{ __html: livro.desc }} />
                     </div>
-                    <div className="info">
-                      <div><span>Autor: </span><p>{livro.author}</p></div>
-                      <div><span>Minha Nota:</span><p>{livro.rate}/10</p></div>
-                    </div>
-                  </section>
 
-                  <a href={`pdf/books/${livro.pdf}`}><button>Download</button></a>
-                </Back>
-              </Card>
-            </BookContainer>
-          ) : (
-            ""
-          )}
-        </div>
-      ))}
-    </SectionContainer>
+                    <section className="bodyCard">
+                      <div>
+                        <span>Gênero:</span>
+                        <ul>
+                          {livro.genre.map((e) => (
+                            <li>
+                              <p>- {e}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <span>Autor: </span>
+                        <p>{livro.author}</p>
+                      </div>
+                      <div>
+                        <span>Minha Nota:</span>
+                        <p>{livro.rate}/10</p>
+                      </div>
+                    </section>
+
+                    <a href={`pdf/books/${livro.pdf}`}>
+                      <button>Download</button>
+                    </a>
+                  </Back>
+                </Card>
+              </BookContainer>
+            ) : (
+              ""
+            )}
+          </div>
+        ))}
+      </SectionContainer>
     </HeaderContainer>
   );
 }

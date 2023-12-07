@@ -170,46 +170,76 @@ export const Back = styled.div`
         justify-self: flex-end;
     }
 
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      margin: 10px 0;
+      max-width: 100px;
+    }
+
     & {
         .bookDesc {
-            display: flex;
-            flex-wrap: wrap;
-            overflow-x: hidden;
-            max-width: 90%;
-            height: 20px;
-            background-color: #2c66b6;
+          width: 90%;
+          max-height: 105px;
+          word-wrap: break-word;
+          overflow-y: scroll;
+          padding: 5px;
+          box-shadow: inset 0 0 10px #75757528;
+
+          p {
+            font-size: 14px;
+          }
+
+          &:hover {
+            cursor: default;
+          }
+
+          /* Scrollbar vertical */
+          &::-webkit-scrollbar {
+            width: 7px; /* Largura da barra de rolagem vertical */
+          }
+            
+          /* Alça da barra de rolagem */
+          &::-webkit-scrollbar-thumb {
+            background-color: #cfcfcf; /* Cor da alça da barra de rolagem */
+            border-radius: 1px; /* Arredondar as bordas da alça da barra de rolagem */
+          }
+
+          /* Barra de rolagem de fundo */
+          &::-webkit-scrollbar-track {
+            background-color: #333333; /* Cor de fundo da barra de rolagem */
+          }
+
+          /* Estilizar a alça quando o mouse passar por cima */
+          &::-webkit-scrollbar-thumb:hover {
+            background-color: rgb(151, 151, 151);
+          }
         }
 
         .bodyCard {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex-wrap: wrap;
+          height: 180px;
+
+          & > div {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: 5px 15px;
+          }
 
-            .genero {
-
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-            }
-
-            .info {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                padding-top: 30px;
-                height: 100%;
-                row-gap: 30px;
-
-                p {
-                    text-align: left;
-                }
-            }
+          &:hover {
+            cursor: default;
+          }
         }
     }
 
-    button {
+    & > a > button {
         background-color: #4299e1;
         color: #fff;
         font-weight: 700;
