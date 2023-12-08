@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface BookProps {
-    backGroundImage: string;
+  backgroundimage: string;
 }
 
 export const HeaderContainer = styled.header`
@@ -12,6 +12,11 @@ export const HeaderContainer = styled.header`
 
   h1 {
     margin-bottom: 5px;
+
+    svg {
+      position: relative;
+      top: 7px;
+    }
   }
 
   & > p {
@@ -98,11 +103,11 @@ export const DivFilterContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     min-width: 320px;
-    background-color: #55555529;
+    background-color: #2c2c2ca2;
     border-radius: 20px;
-    box-shadow: 0 0 10px #afafaf36;
+    box-shadow: 0 0 10px #afafaf71;
     padding: 5px;
-    margin: 5px;
+    margin: 15px 0 0 0;
   
     h1 {
       margin: 0;
@@ -121,13 +126,13 @@ export const BookContainer = styled.div`
     cursor: pointer;
   `;
 
-export const Card = styled.div<{ flipped: boolean }>`
+export const Card = styled.div<{ flipped: string }>`
     width: 300px;
     height: 450px;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
     box-shadow: 5px 5px 15px 0px #888;
-    transform: ${(props) => (props.flipped ? "rotateY(180deg)" : "rotateY(0deg)")};
+    transform: ${(props) => (props.flipped)};
     margin: 10px 20px;
     border-radius: 10px;
   `;
@@ -137,7 +142,7 @@ export const Front = styled.div<BookProps>`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url(${(props) => props.backGroundImage});
+    background-image: url(${(props) => props.backgroundimage});
     background-size: cover;
     border-radius: 5px;
   `;
@@ -167,7 +172,15 @@ export const Back = styled.div`
     }
 
     a {
-        justify-self: flex-end;
+      text-decoration: none;
+      color: #fff;
+      justify-self: flex-end;
+
+      p {
+        &:hover {
+        scale: 0.95;
+      }
+      }
     }
 
     ul {
@@ -176,67 +189,73 @@ export const Back = styled.div`
       align-items: flex-start;
       padding: 0;
       margin: 10px 0;
-      max-width: 100px;
+      max-width: 120px;
+    }
+
+    &:hover {
+      cursor: default;
     }
 
     & {
-        .bookDesc {
-          width: 90%;
-          max-height: 105px;
-          word-wrap: break-word;
-          overflow-y: scroll;
-          padding: 5px;
-          box-shadow: inset 0 0 10px #75757528;
+      .icon {
+        position: absolute;
+        top: 420px;
+        left: 10px;
 
-          p {
-            font-size: 14px;
-          }
+        &:hover {
+          cursor: pointer;
+        }
+      }
 
-          &:hover {
-            cursor: default;
-          }
+      .bookDesc {
+        width: 90%;
+        max-height: 105px;
+        word-wrap: break-word;
+        overflow-y: scroll;
+        padding: 5px;
+        box-shadow: inset 0 0 10px #75757528;
 
-          /* Scrollbar vertical */
-          &::-webkit-scrollbar {
-            width: 7px; /* Largura da barra de rolagem vertical */
-          }
-            
-          /* Alça da barra de rolagem */
-          &::-webkit-scrollbar-thumb {
-            background-color: #cfcfcf; /* Cor da alça da barra de rolagem */
-            border-radius: 1px; /* Arredondar as bordas da alça da barra de rolagem */
-          }
-
-          /* Barra de rolagem de fundo */
-          &::-webkit-scrollbar-track {
-            background-color: #333333; /* Cor de fundo da barra de rolagem */
-          }
-
-          /* Estilizar a alça quando o mouse passar por cima */
-          &::-webkit-scrollbar-thumb:hover {
-            background-color: rgb(151, 151, 151);
-          }
+        p {
+          font-size: 14px;
         }
 
-        .bodyCard {
+        /* Scrollbar vertical */
+        &::-webkit-scrollbar {
+          width: 7px; /* Largura da barra de rolagem vertical */
+        }
+          
+        /* Alça da barra de rolagem */
+        &::-webkit-scrollbar-thumb {
+          background-color: #cfcfcf; /* Cor da alça da barra de rolagem */
+          border-radius: 1px; /* Arredondar as bordas da alça da barra de rolagem */
+        }
+
+        /* Barra de rolagem de fundo */
+        &::-webkit-scrollbar-track {
+          background-color: #333333; /* Cor de fundo da barra de rolagem */
+        }
+
+        /* Estilizar a alça quando o mouse passar por cima */
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: rgb(151, 151, 151);
+        }
+      }
+
+      .bodyCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 180px;
+
+        & > div {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          flex-wrap: wrap;
-          height: 180px;
-
-          & > div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 5px 15px;
-          }
-
-          &:hover {
-            cursor: default;
-          }
+          align-items: center;
+          margin: 5px 15px;
         }
+      }
     }
 
     & > a > button {
