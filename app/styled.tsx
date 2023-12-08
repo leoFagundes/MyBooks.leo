@@ -96,6 +96,7 @@ export const SectionContainer = styled.section`
     border-radius: 15px;
     color: black;
     padding: 20px;
+    box-shadow: inset 0 0 60px #00000073;
   `;
 
 export const DivFilterContainer = styled.div`
@@ -117,6 +118,7 @@ export const DivFilterContainer = styled.div`
     p {
       align-self: flex-start;
       font-size: 18px;
+      padding-left: 15px;
     }
   `;
 

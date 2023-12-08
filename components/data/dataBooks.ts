@@ -69,7 +69,7 @@ export const dataBooks: BookData[] = [
         <br/><br/>
         Uma história sensível e emocionante, Os dois morrem no final nos lembra o que significa estar vivo. Com seu olhar único, Adam Silvera mostra que cada segundo importa, e mesmo que não haja vida sem morte, nem amor sem perda, tudo pode mudar em 24 horas.
         `,
-        genre: ['Romance', 'Fiction', 'Young Adult', 'Queer', 'Fantasy'],
+        genre: ['Romance', 'Fiction', 'Suspense', 'Young Adult', 'Queer', 'Fantasy'],
         img: 'Os_Dois_Morrem_No_Final.png',
         pdf: 'Os_Dois_Morrem_No_Final.pdf',
         rate: '8',
