@@ -6,7 +6,7 @@ export const BG = styled.div`
     position: fixed;
     height: 100%;
     width: 100%;
-    opacity: 0.85;
+    opacity: 0.8;
     background-color: rgb(18, 18, 18);
     z-index: -1;
 `

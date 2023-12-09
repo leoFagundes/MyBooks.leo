@@ -11,7 +11,7 @@ const NavContainer = styled.nav`
   align-items: center;
   padding: 0 20px;
   height: 70px;
-  background-color: rgba(30, 30, 30, 0.5);
+  background-color: rgba(30, 30, 30, 0);
 `
 
 const LogoContainer = styled.div`

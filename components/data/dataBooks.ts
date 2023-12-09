@@ -3,7 +3,7 @@ export interface BookData {
     desc: string;
     genre: string[];
     img: string;
-    pdf: string;
+    pdf?: string;
     rate: string;
     author: string;
   }
@@ -76,37 +76,99 @@ export const dataBooks: BookData[] = [
         author: 'Adam Silvera '
     },
     {
-        name: 'teste1',
+        name: 'Percy Jackson - O Ladrão de Raios',
         desc: `
-        
+        E se os deuses do Olimpo estivessem vivos no século XXI? E se eles ainda se apaixonassem por mortais e gerassem filhos heróis? Segundo a lenda da Antiguidade, a maioria desses semideuses dificilmente passa da adolescência. Poucos conseguem descobrir sua identidade. 
+        <br/><br/>
+        Percy Jackson é filho de um deus. Ele está prestes a ser expulso do colégio... De novo. Mas, aos doze anos, esse é apenas mais um de seus problemas: além do transtorno do déficit de atenção e da dislexia, parece que, ultimamente, criaturas fantásticas e deuses do Olimpo saltam dos livros de mitologia diretamente para a realidade. E ao que tudo indica estão aborrecidos. O raio-mestre de Zeus foi roubado, e é Percy quem deve resgatá-lo. 
+        <br/><br/>
+        Para restaurar a paz no Olimpo, ele e seus amigos heróis precisarão fazer mais que capturar o verdadeiro ladrão: Percy terá de encarar o pai, resolver o enigma do Oráculo e desvendar uma traição mais ameaçadora que a fúria dos deuses.
         `,
-        genre: ['teste'],
-        img: 'teste',
-        pdf: 'teste',
-        rate: 'teste',
-        author: 'teste'
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '1-Percy_Jackson_e_o_ladrão_de_raios.png',
+        pdf: '1-Percy_Jackson_e_o_ladrão_de_raios.pdf',
+        rate: '8',
+        author: 'Rick Riordan'
     },
     {
-        name: 'teste2',
+        name: 'Percy Jackson - O Mar de Monstros',
         desc: `
-        
+        O ano de Percy Jackson foi surpreendentemente calmo. Nenhum monstro colocou os pés em sua escola, não teve acidentes estranhos e nenhuma briga em sala de aula. Mas quando um inocente jogo de queimada entre ele e seus colegas torna-se uma disputa mortal contra uma tenebrosa gangue de gigantes canibais, as coisas começam a ficar feias. A inesperada chegada de Annabeth traz outras más notícias: as fronteiras mágicas que protegem o Acampamento Meio-Sangue foram envenenadas por um inimigo misterioso e, a menos que um antídoto seja encontrado, o único porto seguro dos semideuses será destruído.
+
+        Percy e seus amigos precisam se aventurar no Mar de Monstros para buscar o único artefato capaz de salvar o acampamento. Antes, porém, nosso herói entrará em confronto com a verdadeira natureza de seu amigo Tyson - algo que o fará questionar se ser filho de Poseidon é uma honra ou uma terrível maldição.
         `,
-        genre: ['teste'],
-        img: 'teste',
-        pdf: 'teste',
-        rate: 'teste',
-        author: 'teste'
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '2-Percy_Jackson_o_mar_de_monstros.png',
+        pdf: '2-Percy_Jackson_o_mar_de_monstros.pdf',
+        rate: '7',
+        author: 'Rick Riordan'
     },
     {
-        name: 'teste3',
+        name: 'Percy Jackson - A Maldição do Titã',
         desc: `
-        
+        Em dezembro, seis meses após os acontecimentos de O Mar de Monstros, Percy Jackson, Thalia Grace e Annabeth Chase vão até a escola de Westover Hall para encontrar Grover Underwood: o sátiro parece ter encontrado dois semideuses muito poderosos, os irmãos Nico e Bianca di Angelo. Thalia demonstra sua habilidade em manipular a Névoa e tenta convencer professor e vice-diretora de que os três estudam na escola. A professora é facilmente enganada, mas o vice-diretor, que na verdade é uma Manticora disfarçada, não foi iludido. Os três então se juntam a Grover durante o baile da escola.
+        <br/><br/>
+        Grover logo informa os três meios-sangues que Dr. Espinheiro, o vice-diretor da escola é um monstro, e desconfia da identidade dos dois semideuses encontrados. Thalia arquiteta um plano para distrair o Dr. Espinheiro; entretanto, o plano não sai como planejado: eles são separados pela multidão do baile e Percy é forçado a seguir sozinho o monstro, que levara consigo as duas crianças.
+        <br/><br/>
+        Quando se aproxima de Bianca e Nico, Dr. Espinheiro arremessa um dardo que raspa o ombro de Percy, que percebe também o veneno que adentrara seu corpo. Muito fraco para lutar, o filho de Poseidon escuta enquanto a Manticora fala sobre seus planos. Os irmãos estão apavorados, e Percy tenta tranquilizá-los. A Manticora leva os três até um penhasco enquanto espera seus aliados coletá-los. Percy tenta de todo jeito enviar a Grover uma mensagem por meio da conexão empática que possui com o sátiro, que funciona, e logo Grover, Thalia e Annabeth aparecem, momento em que Dr. Espinheiro revela sua verdadeira forma.
+        <br/><br/>
+        De repente, algumas flechas prateadas passam por Percy e atingem a Manticora, que ataca em retaliação com seus espinhos, quando mais flechas prateadas continuam a vir dos arbustos. As arqueiras saem de suas posições. Todas são garotas adolescentes usando roupas prateadas. Thalia as introduz como Caçadoras de Ártemis. Elas estão prestes a atirar, quando Dr. Espinheiro avança para Thalia e Percy, sabendo que ambos não possuem boas condições de batalha. Annabeth sobe na Manticora e apunhala com sua faca, mas as Caçadoras disparam suas flechas, e monstro cai do penhasco, levando junto a filha de Atena, que deixa para trás seu boné dos Yankees.
+        <br/><br/>
+        Ártemis logo aparece e ordena que as Caçadoras montem acampamento. Percy é convidado para uma conversa com a deusa, que aparece na forma de uma garota com mais ou menos doze anos de idade. Ela pede a Percy o que exatamente a Manticora falara e conclui que tempos perigosos estão por vir. Ela decide caçar criaturas poderosas, uma que possui poder suficiente para destruir os deuses olimpianos. Antes de ir, Zoë Doce-Amarga, sua tenente, é colocada como responsável pelo grupo, que ficará no Acampamento Meio-Sangue até que Ártemis retorne. Durante sua curta passagem em Westover Hall, Bianca escolhe se juntar às Caçadoras, ganhando imortalidade e uma nova família, além de abandonar para sempre amor romântico, deixando Nico ao cuidado dos responsáveis pelo Acampamento Meio-Sangue
+        <br/><br/>
+        O grupo, de carona com Apolo, o irmão de Ártemis, que os deixa dirigir sua Carruagem do Sol, com Thalia no volante. Após uma breve aventura com a filha de Zeus na pilotagem, eles finalmente alcançam o Acampamento Meio-Sangue, quase batendo no lago de canoagem.
         `,
-        genre: ['teste'],
-        img: 'teste',
-        pdf: 'teste',
-        rate: 'teste',
-        author: 'teste'
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '3-Percy_Jackson_a_maldicao_do_tita.png',
+        pdf: '3-Percy_Jackson_a_maldicao_do_tita.pdf',
+        rate: '6',
+        author: 'Rick Riordan'
+    },
+    {
+        name: 'Percy Jackson - A Batalha do Labirinto',
+        desc: `
+        O Monte Olimpo está em perigo. Cronos, o perverso titã que foi destronado e feito em pedaços pelos doze deuses olimpianos, prepara um retorno triunfal. 
+        <br/><br/>
+        O primeiro passo de suas tropas será atacar e destruir o campo de treinamento dos heróis, filhos de deuses com mortais, que desde a Grécia Antiga combatem na linha de frente em defesa dos olimpianos.
+        <br/><br/>
+        Para assegurar que o refúgio de semideuses, o Acampamento Meio-Sangue, não seja invadido, Percy Jackson, Tyson, Annabeth e Grover são destacados para uma importante missão: deter as forças de Cronos antes que se aproximem do acampamento, no emaranhado de corredores do temido Labirinto de Dédalo – um interminável universo subterrâneo que, a cada curva, revela as mais aterrorizantes surpresas
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '4-Percy_Jackson_a_batalha_do_labirinto.png',
+        pdf: '4-Percy_Jackson_a_batalha_do_labirinto.pdf',
+        rate: '10',
+        author: 'Rick Riordan'
+    },
+    {
+        name: 'Percy Jackson - O Último Olimpiano',
+        desc: `
+        O aguardado desfecho da premiada série de fantasia «Percy Jackson e os Olimpianos».<br/>
+        Os mestiços passaram o ano inteiro a preparar para a batalha contra os Titãs, sabendo que a vitória é pouco provável. O exército de Cronos está mais forte do que nunca, e a cada novo deus ou mestiço que é recrutado, o poder de Cronos aumenta cada vez mais.
+        <br/><br/>
+        Enquanto os Olimpianos lutam para travar o monstro Tifão, Cronos avança em direção à cidade de Nova Iorque, onde o Monte Olimpo quase não tem vigilância. Cabe agora a Percy Jackson e ao seu exército de jovens semideuses travarem o Senhor do Tempo.
+        <br/><br/>
+        Neste muito aguardado quinto e último livro da série best-seller «Percy Jackson e os Heróis do Olimpo», a profecia envolve o dia do 16.º aniversário de Percy. E, enquanto luta por travar o fim da civilização ocidental nas ruas de Manhattan, Percy enfrenta a terrível sensação de que, na realidade, está a lutar contra o seu próprio destino.
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '5-Percy_Jackson_o_ultimo_olimpiano.png',
+        pdf: '5-Percy_Jackson_o_ultimo_olimpiano.pdf',
+        rate: '10',
+        author: 'Rick Riordan'
+    },
+    {
+        name: 'Percy Jackson - Os Olimpianos',
+        desc: `
+        Baseado nos romances escritos por Rick Riordan, a série acompanha o jovem Percy Jackson, um garoto que acaba de descobrir que é um semideus - metade humano, metade deus.
+        <br/><br/>
+        Percy é filho de Poseidon, o deus dos mares e oceanos na mitologia grega, e precisa aprender a controlar suas habilidades especiais. Frequentando o Acampamento Meio-Sangue, um lugar para crianças e adolescentes como ele, Percy se aproxima de Grover e Annabeth. Grover é um sátiro sensível à natureza e as emoções dos outros, enquanto Annabeth é uma garota astuta e curiosa, características de sua mãe, a deusa Atena.
+        <br/><br/>
+        Juntos, os melhores amigos embarcam em uma jornada para impedir que aconteça uma guerra entre os deuses do Olimpo. Pouco depois de descobrir sua verdadeira origem como semideus, Percy é acusado por Zeus, o deus do céu e também seu tio, de ter roubado o seu mais precioso raio. Percy e seus amigos devem viajar pelo país para encontrar o raio e restaurar a ordem no Olimpo.
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: 'Percy_Jackson_e_os_Olimpianos.png',
+        pdf: 'Percy_Jackson_e_os_Olimpianos.pdf',
+        rate: '8',
+        author: 'Rick Riordan'
     },
     {
         name: 'teste4',

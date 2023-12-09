@@ -149,7 +149,7 @@ export const Front = styled.div<BookProps>`
     border-radius: 5px;
   `;
 
-export const Back = styled.div`
+export const Back = styled.div<BookProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,12 +160,14 @@ export const Back = styled.div`
     backface-visibility: hidden;
     transform: rotateY(180deg);
     background-color: #1b1b1b;
+    background-image: url(${(props) => props.backgroundimage});
+    background-size: cover;
+    background-position: 50% 0;
     border-radius: 5px;
     color: #fff;
     box-shadow: inset 0 0 10px #cacaca79;
 
     p {
-        text-align: center;
         margin: 0;
     }
 
@@ -194,6 +196,12 @@ export const Back = styled.div`
       max-width: 120px;
     }
 
+    span {
+          font-size: 14px;
+          text-align: left;
+          width: 90%;
+        }
+
     &:hover {
       cursor: default;
     }
@@ -211,11 +219,31 @@ export const Back = styled.div`
 
       .bookDesc {
         width: 90%;
-        max-height: 105px;
+        height: 105px;
         word-wrap: break-word;
         overflow-y: scroll;
         padding: 5px;
+        background-color: #1b1b1b52;
         box-shadow: inset 0 0 10px #75757528;
+        border-radius: 10px;
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          background-color: #0000002f;
+          backdrop-filter: blur(5px);
+          padding: 5px;
+          margin-left: -5px;
+          transform: translateY(85px);
+          border-radius: 0 10px 0 0;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+        }
 
         p {
           font-size: 14px;
@@ -238,24 +266,39 @@ export const Back = styled.div`
         }
 
         /* Estilizar a alça quando o mouse passar por cima */
-        &::-webkit-scrollbar-thumb:hover {
+        &::-webkit-scrollbar-thumb:active {
           background-color: rgb(151, 151, 151);
         }
       }
 
       .bodyCard {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         flex-wrap: wrap;
-        height: 180px;
+        height: 150px;
 
-        & > div {
+        p {
+          font-size: 12px;
+          text-align: left;
+        }
+
+        & > section {
+          height: 100%;
+        }
+
+        .leftBodySide {
+          width: 120px;
+        }
+
+        .rightBodySide {
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin: 5px 15px;
+          gap: 10px;
+          width: 100px;
+        }
+
+        .info {
+          
         }
       }
     }
