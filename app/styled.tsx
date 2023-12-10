@@ -25,6 +25,16 @@ export const HeaderContainer = styled.header`
     font-size: 20px;
     text-align: center;
   }
+
+  @media screen and (max-width: 675px) {
+    h1 {
+      font-size: 200%;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 95%;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -35,7 +45,6 @@ export const InputContainer = styled.div`
     padding: 10px 50px;
     row-gap: 10px;
     column-gap: 50px;
-    min-width: 320px;
     margin-top: 20px;
   
     input {
@@ -44,7 +53,7 @@ export const InputContainer = styled.div`
       color: #2d3748;
       font-size: 0.875rem; /* 14px */
       border-radius: 0.375rem; /* 6px */
-      width: 100%;
+      width: 190px;
       padding: 0.625rem; /* 10px */
   
       &::placeholder {
@@ -70,7 +79,7 @@ export const InputContainer = styled.div`
       color: #2d3748;
       font-size: 0.875rem; /* 14px */
       border-radius: 0.375rem; /* 6px */
-      width: 100%;
+      width: 210px;
       padding: 0.625rem; /* 10px */
   
       &::placeholder {
@@ -90,7 +99,6 @@ export const SectionContainer = styled.section`
     flex-wrap: wrap;
     width: 100%;
     margin: 30px 0;
-    min-width: 320px;
     min-height: 400px;
     background-color: #f8f9fa;
     border-radius: 15px;
@@ -133,7 +141,8 @@ export const Card = styled.div<{ flipped: string }>`
     height: 450px;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
-    box-shadow: 5px 5px 15px 0px #888;
+    /* box-shadow: 5px 5px 15px 0px #888; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     transform: ${(props) => (props.flipped)};
     margin: 10px 20px;
     border-radius: 10px;

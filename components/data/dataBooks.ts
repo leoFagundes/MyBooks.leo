@@ -44,7 +44,7 @@ export const dataBooks: BookData[] = [
         genre: ['Economics', 'Financial education', 'Investments', 'Self-Help', 'Classics'],
         img: 'O_homem_mais_rico_da_Babilonia.png',
         pdf: 'O_homem_mais_rico_da_Babilonia.pdf',
-        rate: '9',
+        rate: '10',
         author: 'George S Clason'
     },
     {
@@ -94,7 +94,7 @@ export const dataBooks: BookData[] = [
         name: 'Percy Jackson - O Mar de Monstros',
         desc: `
         O ano de Percy Jackson foi surpreendentemente calmo. Nenhum monstro colocou os pés em sua escola, não teve acidentes estranhos e nenhuma briga em sala de aula. Mas quando um inocente jogo de queimada entre ele e seus colegas torna-se uma disputa mortal contra uma tenebrosa gangue de gigantes canibais, as coisas começam a ficar feias. A inesperada chegada de Annabeth traz outras más notícias: as fronteiras mágicas que protegem o Acampamento Meio-Sangue foram envenenadas por um inimigo misterioso e, a menos que um antídoto seja encontrado, o único porto seguro dos semideuses será destruído.
-
+        <br/><br/>
         Percy e seus amigos precisam se aventurar no Mar de Monstros para buscar o único artefato capaz de salvar o acampamento. Antes, porém, nosso herói entrará em confronto com a verdadeira natureza de seu amigo Tyson - algo que o fará questionar se ser filho de Poseidon é uma honra ou uma terrível maldição.
         `,
         genre: ['Adventure', 'Fantasy', 'Mythology'],
@@ -152,7 +152,7 @@ export const dataBooks: BookData[] = [
         genre: ['Adventure', 'Fantasy', 'Mythology'],
         img: '5-Percy_Jackson_o_ultimo_olimpiano.png',
         pdf: '5-Percy_Jackson_o_ultimo_olimpiano.pdf',
-        rate: '10',
+        rate: '9',
         author: 'Rick Riordan'
     },
     {
@@ -171,6 +171,82 @@ export const dataBooks: BookData[] = [
         author: 'Rick Riordan'
     },
     {
+        name: 'Saldo Positivo: Como Ficar Sempre no Azul',
+        desc: `
+        Qualquer pessoa pode conseguir alcançar a independência financeira. Poucas são as pessoas que já não se viram, pelo menos uma vez na vida, angustiadas por não conseguirem fazer o salário durar até o fim do mês.
+        <br/><br/>
+        Então, se parece quase impossível ficar no azul o mês inteiro, como sair das dívidas e conseguir independência financeira? Ninguém, ao nascer, vem rotulado para não ganhar dinheiro nem ficar rico. As oportunidades existem e estão aí para serem aproveitadas por todas as pessoas. Neste livro, você verá que mesmo sendo assalariado, é possível enriquecer apenas com a renda do trabalho.
+        <br/><br/>
+        Você vai aprender a se organizar e planejar para ter sempre saldo positivo e a adotar atitudes que não comprometam o resultado de seus planos. O que você está esperando para começar a construir sua independência financeira?
+        `,
+        genre: ['Financial education', 'Economics', 'Self-Help'],
+        img: 'Saldo_Positivo.jpg',
+        rate: '7',
+        author: 'José Mário Severino'
+    },
+    {
+        name: 'A Psicologia Financeira',
+        desc: `
+        O sucesso financeiro tem menos a ver com a sua inteligência e muito mais a ver com o seu comportamento. E a forma como alguém se comporta é uma coisa difícil de se ensinar, mesmo para pessoas bastante inteligentes.
+        <br/><br/>
+        A maneira como lidamos com o dinheiro ― finanças pessoais, investimentos, decisões de negócios ― costuma ser explicada como um campo puramente matemático, no qual dados e fórmulas nos dizem o que fazer. A verdade, porém, é que grandes decisões monetárias não são tomadas diante de uma planilha, mas durante jantares com a família e reuniões com os colegas de trabalho. Além disso, cada uma delas é um reflexo da história pessoal e das dificuldades enfrentadas pelo indivíduo que as tomou.
+        <br/><br/>
+        Abordando a gestão financeira de maneira inédita, Morgan Housel apresenta casos de sucessos e fracassos de investidores que demonstram a importância do fator psicológico no gerenciamento das finanças, oferecendo aprendizados para administrar e fazer o dinheiro render em busca do grande objetivo de todos nós: ser feliz.
+        <br/><br/>
+        <i>“[A psicologia Financeira] é uma leitura essencial para qualquer pessoa interessada em administrar melhor seu dinheiro.” ― James Clear, autor do best-seller Hábitos Atômicos</i>
+        `,
+        genre: ['Financial education', 'Economics', 'Investments'],
+        img: 'A_Psicologia_Financeira.jpg',
+        pdf: 'A_Psicologia_Financeira.pdf',
+        rate: '9',
+        author: 'Morgan Housel'
+    },
+    {
+        name: 'Os Segredos da Mente Milionária',
+        desc: `
+        Se as suas finanças andam na corda bamba, talvez esteja na hora de você refletir sobre o que T. Harv Eker chama de "o seu modelo de dinheiro" – um conjunto de crenças que cada um de nós alimenta desde a infância e que molda o nosso destino financeiro, quase sempre nos levando para uma situação difícil.
+        <br/><br/>
+        Nesse livro, Eker mostra como substituir uma mentalidade destrutiva – que você talvez nem perceba que tem – pelos "arquivos de riqueza", 17 modos de pensar e agir que distinguem os ricos das demais pessoas. Alguns desses princípios fundamentais são:
+        <br/><br/>
+        • Ou você controla o seu dinheiro ou ele controlará você.
+        <br/><br/>
+        • O hábito de administrar as finanças é mais importante do que a quantidade de dinheiro que você tem.
+        <br/><br/>
+        • A sua motivação para enriquecer é crucial: se ela possui uma raiz negativa, como o medo, a raiva ou a necessidade de provar algo a si mesmo, o dinheiro nunca lhe trará felicidade.
+        <br/><br/>
+        • O segredo do sucesso não é tentar evitar os problemas nem se livrar deles, mas crescer pessoalmente para se tornar maior do que qualquer adversidade.
+        <br/><br/>
+        • Os gastos excessivos têm pouco a ver com o que você está comprando e tudo a ver com a falta de satisfação na sua vida.
+        <br/><br/>
+        O autor também ensina um método eficiente de administrar o dinheiro. Você aprenderá a estabelecer sua remuneração pelos resultados que apresenta e não pelas horas que trabalha. Além disso, saberá como aumentar o seu patrimônio líquido – a verdadeira medida da riqueza.
+        <br/><br/>
+        A ideia é fazer o seu dinheiro trabalhar para você tanto quanto você trabalha para ele. Para isso, é necessário poupar e investir em vez de gastar. "Enriquecer não diz respeito somente a ficar rico em termos financeiros", diz Eker. "É mais do que isso: trata-se da pessoa que você se torna para alcançar esse objetivo."
+        `,
+        genre: ['Economics', 'Financial education', 'Investments'],
+        img: 'Os_Segredos_Da_Mente_Milionária.jpg',
+        pdf: 'Os_Segredos_Da_Mente_Milionária.pdf',
+        rate: '8',
+        author: 'T. Harv Eker'
+    },
+    {
+        name: 'Pai Rico, Pai Pobre',
+        desc: `
+        A escola prepara as crianças para o mundo real?  Essa é a primeira pergunta com a qual o leitor se depara neste livro.  O recado é ousado e direto: boa formação e notas altas não bastam para assegurar o sucesso de alguém. O mundo mudou; a maioria dos jovens tem cartão de crédito, antes mesmo de concluir os estudos, e nunca teve aula sobre dinheiro, investimentos, juros etc. Ou seja, eles vão para a escola, mas continuam financeiramente improficientes, despreparados para enfrentar um mundo que valoriza mais as despesas do que a poupança.
+        <br/><br/>
+        Para o autor, o conselho mais perigoso que se pode dar a um jovem nos dias de hoje é: “Vá para a escola, tire notas altas e depois procure um trabalho seguro.”  O fato é que agora as regras são outras, e não existe mais emprego garantido para ninguém.  Pai Rico, Pai Pobre demonstra que a questão não é ser empregado ou empregador, mas ter o controle do próprio destino ou delegá-lo a alguém.  É essa a tese de Robert Kiyosaki neste livro substancial e visionário.  Para ele, a formação proporcionada pelo sistema educacional não prepara os jovens para o mundo que encontrarão depois de formados E como os pais podem ensinar aos filhos o que a escola relega? Essa é outra das muitas perguntas que o leitor encontra em Pai Rico, Pai Pobre. Nesse sentido, a proposta do autor é facilitar a tarefa dos pais. Quem entende de contabilidade deve esquecer seus conhecimentos acadêmicos, pois muitas das teorias expostas por Robert Kiyosaki contrariam os princípios contábeis comumente aceitos, e apresentam uma valiosa e moderna percepção do modo como se realizam os investimentos.
+        <br/><br/>
+        A sociedade sofre mudanças radicais e, talvez, de proporções maiores do que as ocorridas em séculos passados. Não existe bola de cristal, mas algo é certo: a perspectiva global de transformações transcende nossa realidade imediata. Aconteça o que acontecer,
+        só existem duas alternativas: segurança ou independência financeira. E o objetivo de Pai Rico, Pai Pobre é instruir o leitor e despertar sua inteligência financeira e a de seus filhos.
+        <br/><br/>
+        <i>"A principal razão pela qual as pessoas têm problemas financeiros é que passaram anos na escola, mas não aprenderam nada sobre dinheiro. O resultado é que elas aprendem a trabalhar por dinheiro… mas nunca a fazê-lo trabalhar para elas."- Robert Kiyosaki.</i>
+        `,
+        genre: ['Economics', 'Financial education', 'Investments', 'Classics'],
+        img: 'Pai_Rico_Pai_Pobre.jpg',
+        pdf: 'Pai_Rico_Pai_Pobre.pdf',
+        rate: '8',
+        author: ' Robert T. Kiyosaki'
+    },
+    {
         name: 'teste4',
         desc: `
         
@@ -181,5 +257,4 @@ export const dataBooks: BookData[] = [
         rate: 'teste',
         author: 'teste'
     },
-    
 ]

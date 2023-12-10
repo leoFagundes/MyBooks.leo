@@ -31,7 +31,7 @@ export default function InputFilter({ inputValue, setInputValue, selectedGenre, 
                     value={selectedGenre}
                     onChange={(event) => setSelectedGenre(event.target.value)}
                 >
-                    <option value="">Todos</option>
+                    <option value="">All</option>
                     {sortedGenres.map((genre) => (
                         <option key={genre} value={genre}>
                             {genre}

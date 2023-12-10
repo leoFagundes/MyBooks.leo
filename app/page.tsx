@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <HeaderContainer>
-      <Title fontSize="350%" fontFamily="'Permanent Marker', cursive;">
+      <Title fontSize="310%" fontFamily="'Permanent Marker', cursive;">
         Uma Breve Viagem Pelos Meus Livros <GiBookshelf size={60} />
       </Title>
       <p>
