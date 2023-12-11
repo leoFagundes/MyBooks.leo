@@ -13,5 +13,5 @@ export const Title = styled.h1<TitleProps>`
   text-align: center;
   font-weight: ${(props) => props.fontWeight || 'bold'};
   color: ${(props) => props.color || '#fff'};
-  font-family: ${(props) => props.fontFamily || "'Montserrat', sans-serif"}
+  font-family: ${(props) => props.fontFamily || "'Montserrat', sans-serif"};
 `

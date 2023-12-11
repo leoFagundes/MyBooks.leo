@@ -13,18 +13,26 @@ const ModalOverlay = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
+
+  & {
+    cursor: pointer;
+  }
 `;
 
 const ModalContent = styled.div`
   background: #fff;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   max-width: 600px;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-height: 80vh;
   overflow-y: scroll;
   z-index: 11;
+
+  & {
+    cursor: default;
+  }
 
   /* Scrollbar vertical */
   &::-webkit-scrollbar {
@@ -56,9 +64,17 @@ const CloseButton = styled.div`
 `;
 
 const Modal = ({ children, onClose }: any) => {
+  // função para evitar a propagação do clique
+  const handleDownloadClick = (
+    event: React.MouseEvent<HTMLElement, MouseEvent>
+  ) => {
+    // Impede a propagação do clique para evitar que chegue ao handleBookClick
+    event.stopPropagation();
+  };
+
   return (
-    <ModalOverlay>
-      <ModalContent>
+    <ModalOverlay onClick={onClose}>
+      <ModalContent onClick={handleDownloadClick}>
         <CloseButton onClick={onClose}><IoCloseCircleOutline size={30} color={'#fff'} /></CloseButton>
         <strong>Sinopse</strong>
         <strong>{children}</strong>

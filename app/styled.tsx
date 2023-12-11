@@ -28,7 +28,16 @@ export const HeaderContainer = styled.header`
 
   @media screen and (max-width: 675px) {
     h1 {
-      font-size: 200%;
+      font-size: 180%;
+
+      svg {
+        margin-bottom: -10px;
+        scale: 0.7;
+      }
+    }
+
+    p {
+      font-size: 14px;
     }
   }
 
@@ -175,6 +184,10 @@ export const Back = styled.div<BookProps>`
     border-radius: 5px;
     color: #fff;
     box-shadow: inset 0 0 10px #cacaca79;
+
+    & > h1:hover {
+      cursor: pointer;
+    }
 
     p {
         margin: 0;

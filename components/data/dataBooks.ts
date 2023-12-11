@@ -20,7 +20,7 @@ export const dataBooks: BookData[] = [
         <br/><br/>
         Em Verity, Colleen Hoover se afasta do estilo que a consagrou, os romances, para se aventurar em um suspense psicológico que deixou todo o mercado editorial sem palavras de tão avassalador. Através de uma narrativa perturbadora e chocante, Verity explora o lado mais sombrio das relações humanas deixando uma surpresinha chocante no final.
         `,
-        genre: ['Romance', 'Fiction', 'Mystery', 'Suspense', 'Adult', 'Dark'],
+        genre: ['Romance', 'Fiction', 'Mystery', 'Suspense', 'Adult'],
         img: 'verity.png',
         pdf: 'verity.pdf',
         rate: '10',
@@ -246,15 +246,19 @@ export const dataBooks: BookData[] = [
         rate: '8',
         author: ' Robert T. Kiyosaki'
     },
-    {
-        name: 'teste4',
-        desc: `
-        
-        `,
-        genre: ['teste'],
-        img: 'teste',
-        pdf: 'teste',
-        rate: 'teste',
-        author: 'teste'
-    },
+    
 ]
+
+/*
+{
+    name: 'teste4',
+    desc: `
+    
+    `,
+    genre: ['teste'],
+    img: 'teste',
+    pdf: 'teste',
+    rate: 'teste',
+    author: 'teste'
+},
+*/
