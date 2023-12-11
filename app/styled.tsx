@@ -41,8 +41,15 @@ export const HeaderContainer = styled.header`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     width: 95%;
+
+      h1 {
+
+      svg {
+        display: none;
+      }
+    }
   }
 `;
 
@@ -114,6 +121,10 @@ export const SectionContainer = styled.section`
     color: black;
     padding: 20px;
     box-shadow: inset 0 0 60px #00000073;
+
+    @media screen and (max-width: 420px) {
+      width: 95%;
+    }
   `;
 
 export const DivFilterContainer = styled.div`
@@ -136,6 +147,10 @@ export const DivFilterContainer = styled.div`
       align-self: flex-start;
       font-size: 18px;
       padding-left: 15px;
+    }
+
+    @media screen and (max-width: 420px) {
+      display: none;
     }
   `;
 

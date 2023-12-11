@@ -12,6 +12,10 @@ const NavContainer = styled.nav`
   padding: 0 20px;
   height: 70px;
   background-color: rgba(30, 30, 30, 0);
+
+  @media screen and (max-width: 420px) {
+    justify-content: center;
+  }
 `
 
 const LogoContainer = styled.div`
