@@ -124,10 +124,11 @@ export default function MySearchBooks() {
                         <section className="rightBodySide">
                           <div className="info">
                             <span>Autor: </span>
-                            {authors?.map((author: string) => (
+                            {authors?.map((author: string, index: React.Key) => (
                               <a
                                 href={`https://www.google.com/search?q=${author}`}
                                 target="_blank"
+                                key={index}
                               >
                                 <p>{author}</p>
                               </a>
