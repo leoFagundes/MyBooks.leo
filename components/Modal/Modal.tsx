@@ -76,7 +76,7 @@ const Modal = ({ children, onClose }: any) => {
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={handleDownloadClick}>
         <CloseButton onClick={onClose}><IoCloseCircleOutline size={30} color={'#fff'} /></CloseButton>
-        <strong>Sinopse</strong>
+        <strong>Sinopse</strong><br/>
         <strong>{children}</strong>
       </ModalContent>
     </ModalOverlay>

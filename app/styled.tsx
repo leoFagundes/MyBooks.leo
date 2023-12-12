@@ -113,7 +113,7 @@ export const SectionContainer = styled.section`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 85vw;
     margin: 30px 0;
     min-height: 400px;
     background-color: #f8f9fa;
@@ -154,15 +154,23 @@ export const DivFilterContainer = styled.div`
     }
   `;
 
-export const BookContainer = styled.div`
+export const BookContainer = styled.div<{
+  scale?: string
+  margin?: string}>`
     position: relative;
     perspective: 1000px;
     cursor: pointer;
+    transform: scale(${(props) => props.scale || '1'});
+    margin: ${(props) => props.margin || '0'}
   `;
 
-export const Card = styled.div<{ flipped: string }>`
-    width: 300px;
-    height: 450px;
+export const Card = styled.div<{ 
+  flipped: string
+  width?: string
+  height?: string 
+  scale?: string }>`
+    width: ${(props) => (props.width ? props.width : '300px')};
+    height: ${(props) => (props.height ? props.height : '450px')};
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
     /* box-shadow: 5px 5px 15px 0px #888; */

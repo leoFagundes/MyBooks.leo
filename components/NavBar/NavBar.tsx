@@ -24,6 +24,22 @@ const LogoContainer = styled.div`
   justify-content: center;
 `
 
+const NavItemContainer = styled.ul`
+  display: flex;
+  gap: 20px;
+  
+  a {
+    text-decoration: none;
+
+    li {
+      font-size: 120%;
+      text-align: center;
+      font-weight: 600;
+      color: ${(props) => props.color || '#fff'};
+    }
+  }
+`
+
 export default function NavBar() {
   return (
     <NavContainer>
@@ -31,6 +47,9 @@ export default function NavBar() {
         <SiBookmyshow size={45} color={'#fff'}/>
         <Title fontSize='180%' fontFamily="'Hedvig Letters Serif', serif;"><i>Books.leo</i></Title>
       </LogoContainer>
+      <NavItemContainer>
+        <a href="/MySearchBooks"><li>MySearchBooks</li></a>
+      </NavItemContainer>
     </NavContainer>
   )
 }

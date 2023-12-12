@@ -7,7 +7,7 @@ import {
 } from "@/app/styled";
 import { Title } from "../styledComponents/Title.styled";
 import React, { useState } from "react";
-import { BookData } from "../data/dataBooks";
+import { BookData } from "../../utils/data/dataBooks";
 import { TfiBackLeft } from "react-icons/tfi";
 import Modal from "../Modal/Modal";
 import { BiExpand } from "react-icons/bi";

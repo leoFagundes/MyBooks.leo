@@ -1,7 +1,7 @@
 "use client";
 
 import { Title } from "@/components/styledComponents/Title.styled";
-import { dataBooks } from "@/components/data/dataBooks";
+import { dataBooks } from "@/utils/data/dataBooks";
 import { useEffect, useState } from "react";
 import { HeaderContainer } from "./styled";
 import InputFilter from "@/components/filterComponent/InputFilter";
