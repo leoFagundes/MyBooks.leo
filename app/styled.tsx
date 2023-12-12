@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-interface BookProps {
-  backgroundimage: string;
-}
-
 export const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
@@ -62,6 +58,21 @@ export const InputContainer = styled.div`
     row-gap: 10px;
     column-gap: 50px;
     margin-top: 20px;
+
+    .inputSearchPage {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      svg:hover {
+        cursor: pointer;
+      }
+
+      svg:active {
+          scale: 0.9;
+      }
+
+    }
   
     input {
       background-color: #edf2f7;
@@ -109,17 +120,20 @@ export const InputContainer = styled.div`
     }
   `;
 
-export const SectionContainer = styled.section`
+export const SectionContainer = styled.section<{
+  width?: string
+  padding?: string
+}>`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 85vw;
+    width: ${(props) => props.width || '85vw'};
     margin: 30px 0;
     min-height: 400px;
     background-color: #f8f9fa;
     border-radius: 15px;
     color: black;
-    padding: 20px;
+    padding: ${(props) => props.padding || '20px'};
     box-shadow: inset 0 0 60px #00000073;
 
     @media screen and (max-width: 420px) {
@@ -156,7 +170,8 @@ export const DivFilterContainer = styled.div`
 
 export const BookContainer = styled.div<{
   scale?: string
-  margin?: string}>`
+  margin?: string
+}>`
     position: relative;
     perspective: 1000px;
     cursor: pointer;
@@ -164,11 +179,12 @@ export const BookContainer = styled.div<{
     margin: ${(props) => props.margin || '0'}
   `;
 
-export const Card = styled.div<{ 
+export const Card = styled.div<{
   flipped: string
   width?: string
-  height?: string 
-  scale?: string }>`
+  height?: string
+  scale?: string
+}>`
     width: ${(props) => (props.width ? props.width : '300px')};
     height: ${(props) => (props.height ? props.height : '450px')};
     transform-style: preserve-3d;
@@ -180,7 +196,10 @@ export const Card = styled.div<{
     border-radius: 10px;
   `;
 
-export const Front = styled.div<BookProps>`
+export const Front = styled.div<{
+  backgroundimage: string
+  imageRendering?: string;
+}>`
     position: absolute;
     width: 100%;
     height: 100%;
@@ -188,9 +207,13 @@ export const Front = styled.div<BookProps>`
     background-image: url(${(props) => props.backgroundimage});
     background-size: cover;
     border-radius: 5px;
+    image-rendering: ${(props) => props.imageRendering || 'auto'};
+    background-position: center center;
   `;
 
-export const Back = styled.div<BookProps>`
+export const Back = styled.div<{
+  backgroundimage: string
+}>`
     display: flex;
     flex-direction: column;
     align-items: center;

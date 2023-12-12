@@ -13,6 +13,10 @@ const NavContainer = styled.nav`
   height: 70px;
   background-color: rgba(30, 30, 30, 0);
 
+  a {
+    text-decoration: none;
+  }
+
   @media screen and (max-width: 420px) {
     justify-content: center;
   }
@@ -32,7 +36,7 @@ const NavItemContainer = styled.ul`
     text-decoration: none;
 
     li {
-      font-size: 120%;
+      font-size: 100%;
       text-align: center;
       font-weight: 600;
       color: ${(props) => props.color || '#fff'};
@@ -43,10 +47,12 @@ const NavItemContainer = styled.ul`
 export default function NavBar() {
   return (
     <NavContainer>
+      <a href="/">
       <LogoContainer>
         <SiBookmyshow size={45} color={'#fff'}/>
         <Title fontSize='180%' fontFamily="'Hedvig Letters Serif', serif;"><i>Books.leo</i></Title>
       </LogoContainer>
+      </a>
       <NavItemContainer>
         <a href="/MySearchBooks"><li>MySearchBooks</li></a>
       </NavItemContainer>

@@ -1,13 +1,15 @@
 
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Back, BookContainer, Card, Front, SectionContainer } from '../styled';
+import { Back, BookContainer, Card, Front, InputContainer, SectionContainer } from '../styled';
 import { TfiBackLeft } from "react-icons/tfi";
 import { BiExpand } from "react-icons/bi";
 import { Title } from '@/components/styledComponents/Title.styled';
 import Modal from '@/components/Modal/Modal';
+import { FaSearch } from "react-icons/fa";
+import { GiArchiveResearch } from "react-icons/gi";
 
 export default function MySearchBooks() {
   const [flippedCards, setFlippedCards] = useState<string[]>([]);
@@ -21,14 +23,15 @@ export default function MySearchBooks() {
     setModalOpen(true);
   };
 
-  const searchBook = (evt: { key: string }) => {
-    if (evt.key === "Enter") {
+  const searchBook = () => {
+    if (search != '') {
       axios.get('https://www.googleapis.com/books/v1/volumes?q=' + search + '&key=AIzaSyDccH6F_6QcnNbJlNbKzEEpiS4b60WO-a4' + '&maxResults=40')
         .then(res => {
           setData(res.data.items)
-          console.log(res.data.items)
         })
         .catch(err => console.log(err))
+    } else {
+      setData([]);
     }
   }
 
@@ -52,17 +55,26 @@ export default function MySearchBooks() {
 
   return (
     <section>
-      <div>
-        <input
-          type="text"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          onKeyDown={searchBook}
-          placeholder='Escreva o nome do seu livro'
-        />
-        <button>Teste</button>
-      </div>
-      <SectionContainer>
+      <InputContainer>
+        <div>
+          <label htmlFor="text">Pesquise um livro</label>
+          <div className='inputSearchPage'>
+            <input
+              id="text"
+              type="text"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  searchBook();
+                }
+              }}
+            />
+            <GiArchiveResearch size={40} onClick={() => searchBook()} />
+          </div>
+        </div>
+      </InputContainer>
+      <SectionContainer width='95vw' padding='5px'>
         {booksData.length > 0 ? booksData.map((item: any) => {
           const volumeInfo = item.volumeInfo
           const categories = volumeInfo.categories
@@ -76,16 +88,18 @@ export default function MySearchBooks() {
                 </Modal>
               )}
               {(volumeInfo && volumeInfo.imageLinks && volumeInfo.imageLinks.smallThumbnail) ? (
-                <BookContainer onClick={() => handleBookClick(item.id)} scale='0.8' margin='-40px -30px;'>
+                <BookContainer onClick={() => handleBookClick(item.id)} >
                   <Card
                     flipped={
                       flippedCards.includes(item.id)
                         ? "rotateY(180deg)"
                         : "rotateY(0deg)"
                     }
-                    scale='0.7'
                   >
-                    <Front backgroundimage={volumeInfo.imageLinks.smallThumbnail} />
+                    <Front
+                      backgroundimage={volumeInfo.imageLinks.smallThumbnail}
+                      imageRendering={'pixelated'}
+                    />
                     <Back backgroundimage={`images/bg-card.png`}>
                       <div className="icon">
                         <TfiBackLeft size={20} color={"#fff"} />
@@ -137,7 +151,7 @@ export default function MySearchBooks() {
                           </div>
                           <div className="info">
                             <span>Nota Geral:</span>
-                            <p>{volumeInfo.averageRating ? volumeInfo.averageRating : '-'}/5</p>
+                            <p>{volumeInfo.averageRating ? volumeInfo.averageRating : '-'} / 5</p>
                           </div>
                         </section>
                       </section>
@@ -147,7 +161,7 @@ export default function MySearchBooks() {
                         onClick={(e) => handleDownloadClick(e)}
                         target="_blank"
                       >
-                        <button>{volumeInfo.previewLink ? 'Download' : 'Indisponível'}</button>
+                        <button>{volumeInfo.previewLink ? 'PDF online' : 'Indisponível'}</button>
                       </a>
                     </Back>
                   </Card>
@@ -169,19 +183,3 @@ export default function MySearchBooks() {
     </section>
   )
 }
-
-
-/*
-<div>
-{booksData.map((item: any) => (
-  <React.Fragment key={item.id}>
-    {item.volumeInfo && item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail && (
-      <>
-        <img src={item.volumeInfo.imageLinks.smallThumbnail} alt="" />
-        TESTE<br />
-      </>
-    )}
-  </React.Fragment>
-))}
-</div>
-*/ 
