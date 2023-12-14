@@ -51,7 +51,7 @@ export default function BooksDisplay({
 
   return (
     <SectionContainer>
-      <img className="bookHeartImage" src="images/bookHeart.png" alt="favoriteBooks" onClick={() => setSelectedGenre('Favorite')} />
+      <img className="bookHeartImage" src="images/bookHeart.png" alt="favoriteBooks" onClick={() => selectedGenre == 'Favorite' ? setSelectedGenre('') : setSelectedGenre('Favorite')} />
       {selectedGenre == 'Favorite' ? (
         <div className="titleBooksFavorites">
           <Title color="black">
