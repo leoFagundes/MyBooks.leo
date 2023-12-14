@@ -3,11 +3,10 @@
 import { Title } from "@/components/styledComponents/Title.styled";
 import { dataBooks } from "@/utils/data/dataBooks";
 import { useEffect, useState } from "react";
-import { HeaderContainer } from "./styled";
+import { FilterSection, HeaderContainer } from "./styled";
 import InputFilter from "@/components/filterComponent/InputFilter";
 import OutPutFilter from "@/components/filterComponent/OutPutFilter";
 import BooksDisplay from "@/components/BooksDisplay/BooksDisplay";
-import { GiBookshelf } from "react-icons/gi";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
@@ -41,7 +40,7 @@ export default function Home() {
   return (
     <HeaderContainer>
       <Title fontSize="310%" fontFamily="'Permanent Marker', cursive;">
-        Uma Breve Viagem Pelos Meus Livros <GiBookshelf size={60} />
+        Uma Breve Viagem Pelos Meus Livros
       </Title>
       <p>
         <i>
@@ -49,19 +48,25 @@ export default function Home() {
           longo da minha vida
         </i>
       </p>
-      <InputFilter
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-        selectedGenre={selectedGenre}
-        setSelectedGenre={setSelectedGenre}
-        uniqueGenres={uniqueGenres} />
-      <OutPutFilter filterValue={filterValue} />
+      <FilterSection>
+        <div>
+          <InputFilter
+            inputValue={inputValue}
+            setInputValue={setInputValue}
+            selectedGenre={selectedGenre}
+            setSelectedGenre={setSelectedGenre}
+            uniqueGenres={uniqueGenres} />
+          <OutPutFilter filterValue={filterValue} />
+        </div>
+      </FilterSection>
       <BooksDisplay
         dataBooks={dataBooks}
         inputValue={inputValue}
         selectedGenre={selectedGenre}
         handleBookClick={handleBookClick}
-        flippedCards={flippedCards} />
+        flippedCards={flippedCards} 
+        setSelectedGenre={setSelectedGenre}
+      />
     </HeaderContainer>
   );
 }

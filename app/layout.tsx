@@ -19,11 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
+      <link rel="icon" href="images/favicon.png" />
       <body className={inter.className}>
         <StyledJsxRegistry>
           <BG />
           <NavBar />
-          <main>{children}</main>
+          <main>
+            {children}
+          </main>
         </StyledJsxRegistry>
       </body>
     </html>

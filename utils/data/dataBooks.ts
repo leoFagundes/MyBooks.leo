@@ -20,7 +20,7 @@ export const dataBooks: BookData[] = [
         <br/><br/>
         Em Verity, Colleen Hoover se afasta do estilo que a consagrou, os romances, para se aventurar em um suspense psicológico que deixou todo o mercado editorial sem palavras de tão avassalador. Através de uma narrativa perturbadora e chocante, Verity explora o lado mais sombrio das relações humanas deixando uma surpresinha chocante no final.
         `,
-        genre: ['Romance', 'Fiction', 'Mystery', 'Suspense', 'Adult'],
+        genre: ['Romance', 'Fiction', 'Mystery', 'Suspense', 'Adult', 'Favorite'],
         img: 'verity.png',
         pdf: 'verity.pdf',
         rate: '10',
@@ -44,7 +44,7 @@ export const dataBooks: BookData[] = [
         genre: ['Economics', 'Financial education', 'Investments', 'Self-Help', 'Classics'],
         img: 'O_homem_mais_rico_da_Babilonia.png',
         pdf: 'O_homem_mais_rico_da_Babilonia.pdf',
-        rate: '10',
+        rate: '9',
         author: 'George S Clason'
     },
     {
@@ -76,7 +76,7 @@ export const dataBooks: BookData[] = [
         author: 'Adam Silvera '
     },
     {
-        name: 'Percy Jackson - O Ladrão de Raios',
+        name: 'Percy Jackson - O Ladrão de Raios - Vol1',
         desc: `
         E se os deuses do Olimpo estivessem vivos no século XXI? E se eles ainda se apaixonassem por mortais e gerassem filhos heróis? Segundo a lenda da Antiguidade, a maioria desses semideuses dificilmente passa da adolescência. Poucos conseguem descobrir sua identidade. 
         <br/><br/>
@@ -91,7 +91,7 @@ export const dataBooks: BookData[] = [
         author: 'Rick Riordan'
     },
     {
-        name: 'Percy Jackson - O Mar de Monstros',
+        name: 'Percy Jackson - O Mar de Monstros - Vol2',
         desc: `
         O ano de Percy Jackson foi surpreendentemente calmo. Nenhum monstro colocou os pés em sua escola, não teve acidentes estranhos e nenhuma briga em sala de aula. Mas quando um inocente jogo de queimada entre ele e seus colegas torna-se uma disputa mortal contra uma tenebrosa gangue de gigantes canibais, as coisas começam a ficar feias. A inesperada chegada de Annabeth traz outras más notícias: as fronteiras mágicas que protegem o Acampamento Meio-Sangue foram envenenadas por um inimigo misterioso e, a menos que um antídoto seja encontrado, o único porto seguro dos semideuses será destruído.
         <br/><br/>
@@ -100,11 +100,11 @@ export const dataBooks: BookData[] = [
         genre: ['Adventure', 'Fantasy', 'Mythology'],
         img: '2-Percy_Jackson_o_mar_de_monstros.png',
         pdf: '2-Percy_Jackson_o_mar_de_monstros.pdf',
-        rate: '7',
+        rate: '6',
         author: 'Rick Riordan'
     },
     {
-        name: 'Percy Jackson - A Maldição do Titã',
+        name: 'Percy Jackson - A Maldição do Titã - Vol3',
         desc: `
         Em dezembro, seis meses após os acontecimentos de O Mar de Monstros, Percy Jackson, Thalia Grace e Annabeth Chase vão até a escola de Westover Hall para encontrar Grover Underwood: o sátiro parece ter encontrado dois semideuses muito poderosos, os irmãos Nico e Bianca di Angelo. Thalia demonstra sua habilidade em manipular a Névoa e tenta convencer professor e vice-diretora de que os três estudam na escola. A professora é facilmente enganada, mas o vice-diretor, que na verdade é uma Manticora disfarçada, não foi iludido. Os três então se juntam a Grover durante o baile da escola.
         <br/><br/>
@@ -125,7 +125,7 @@ export const dataBooks: BookData[] = [
         author: 'Rick Riordan'
     },
     {
-        name: 'Percy Jackson - A Batalha do Labirinto',
+        name: 'Percy Jackson - A Batalha do Labirinto - Vol4',
         desc: `
         O Monte Olimpo está em perigo. Cronos, o perverso titã que foi destronado e feito em pedaços pelos doze deuses olimpianos, prepara um retorno triunfal. 
         <br/><br/>
@@ -133,14 +133,14 @@ export const dataBooks: BookData[] = [
         <br/><br/>
         Para assegurar que o refúgio de semideuses, o Acampamento Meio-Sangue, não seja invadido, Percy Jackson, Tyson, Annabeth e Grover são destacados para uma importante missão: deter as forças de Cronos antes que se aproximem do acampamento, no emaranhado de corredores do temido Labirinto de Dédalo – um interminável universo subterrâneo que, a cada curva, revela as mais aterrorizantes surpresas
         `,
-        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        genre: ['Adventure', 'Fantasy', 'Mythology', 'Favorite'],
         img: '4-Percy_Jackson_a_batalha_do_labirinto.png',
         pdf: '4-Percy_Jackson_a_batalha_do_labirinto.pdf',
         rate: '10',
         author: 'Rick Riordan'
     },
     {
-        name: 'Percy Jackson - O Último Olimpiano',
+        name: 'Percy Jackson - O Último Olimpiano - Vol5',
         desc: `
         O aguardado desfecho da premiada série de fantasia «Percy Jackson e os Olimpianos».<br/>
         Os mestiços passaram o ano inteiro a preparar para a batalha contra os Titãs, sabendo que a vitória é pouco provável. O exército de Cronos está mais forte do que nunca, e a cada novo deus ou mestiço que é recrutado, o poder de Cronos aumenta cada vez mais.
@@ -181,7 +181,7 @@ export const dataBooks: BookData[] = [
         `,
         genre: ['Financial education', 'Economics', 'Self-Help'],
         img: 'Saldo_Positivo.jpg',
-        rate: '7',
+        rate: '6',
         author: 'José Mário Severino'
     },
     {
@@ -225,7 +225,7 @@ export const dataBooks: BookData[] = [
         genre: ['Economics', 'Financial education', 'Investments'],
         img: 'Os_Segredos_Da_Mente_Milionária.jpg',
         pdf: 'Os_Segredos_Da_Mente_Milionária.pdf',
-        rate: '8',
+        rate: '7',
         author: 'T. Harv Eker'
     },
     {
@@ -243,10 +243,112 @@ export const dataBooks: BookData[] = [
         genre: ['Economics', 'Financial education', 'Investments', 'Classics'],
         img: 'Pai_Rico_Pai_Pobre.jpg',
         pdf: 'Pai_Rico_Pai_Pobre.pdf',
-        rate: '8',
+        rate: '7',
         author: ' Robert T. Kiyosaki'
     },
-    
+    {
+        name: 'O Desafio de Ferro - Vol1',
+        desc: `
+        A maioria dos garotos faria qualquer coisa para passar no Desafio de Ferro. Callum Hunt não é um deles. Ele quer falhar.
+        <br/><br/>
+        Durante toda a sua vida, Call foi alertado pelo pai para ficar longe da magia. Se for aprovado no Desafio de Ferro e admitido no Magisterium, ele tem certeza de que isso só irá lhe trazer coisas ruins.
+        <br/><br/>
+        Assim, ele se esforça ao máximo para fazer o seu pior... e falha em seu plano de falhar.
+        <br/><br/>
+        Agora, o Magisterium espera por ele, um lugar ao mesmo tempo incrível e sinistro, com laços sombrios que unem o passado de Call e um caminho tortuoso até seu futuro.
+        <br/><br/>
+        O Desafio de Ferro é apenas o começo. A maior das provas ainda está por vir...
+        `,
+        genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction', 'Favorite'],
+        img: 'Magisterium-O_Desafio_de_Ferro.png',
+        pdf: 'Magisterium-O_Desafio_de_Ferro.pdf',
+        rate: '10',
+        author: 'Holly Black & Cassandra Clare'
+    },
+    {
+        name: 'A Luva de Cobre - Vol2',
+        desc: `
+        Os estudantes do Magisterium estão aparentemente seguros. Sob os olhos observadores dos mestres, eles são ensinados a usar magia para levar a ordem a um mundo caótico.
+        <br/><br/>
+        Mas agora o caos está revidando.
+        <br/><br/>
+        Call, Tamara e Aaron deveriam estar preocupados apenas com as tarefas de jovens aprendizes de mago. Em vez disso, depois da assustadora morte de um de seus colegas de classe, eles devem rastrear um terrível assassino... e arriscar suas próprias vidas no processo.
+        <br/><br/>
+        Como Call, Tamara e Aaron descobrem, a magia somente é tão boa quanto a pessoa que a usa. Nas mãos erradas, é capaz de causar um mal imensurável...
+        <br/><br/>
+        Neste terceiro livro da saga Magisterium, as autoras best-sellers Holly Black e Cassandra Clare nos presenteiam com uma escola em que qualquer coisa – boa ou ruim – pode acontecer, e o único jeito de desvendar a verdade é arriscando tudo para encontrá-la.
+        `,
+        genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
+        img: 'Magisterium-A_Luva_de_Cobre.png',
+        pdf: 'Magisterium-A_Luva_de_Cobre.pdf',
+        rate: '8',
+        author: 'Holly Black & Cassandra Clare'
+    },
+    {
+        name: 'A Chave de Bronze - Vol3',
+        desc: `
+        Os estudantes do Magisterium estão aparentemente seguros. Sob os olhos observadores dos mestres, eles são ensinados a usar magia para levar a ordem a um mundo caótico.
+        <br/><br/>
+        Mas agora o caos está revidando.
+        <br/><br/>
+        Call, Tamara e Aaron deveriam estar preocupados apenas com as tarefas de jovens aprendizes de mago. Em vez disso, depois da assustadora morte de um de seus colegas de classe, eles devem rastrear um terrível assassino... e arriscar suas próprias vidas no processo.
+        <br/><br/>
+        Como Call, Tamara e Aaron descobrem, a magia somente é tão boa quanto a pessoa que a usa. Nas mãos erradas, é capaz de causar um mal imensurável...
+        <br/><br/>
+        Neste terceiro livro da saga Magisterium, as autoras best-sellers Holly Black e Cassandra Clare nos presenteiam com uma escola em que qualquer coisa – boa ou ruim – pode acontecer, e o único jeito de desvendar a verdade é arriscando tudo para encontrá-la.
+        `,
+        genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
+        img: 'Magisterium-A_Chave_de_Bronze.png',
+        pdf: 'Magisterium-A_Chave_de_Bronze.pdf',
+        rate: '8',
+        author: 'Holly Black & Cassandra Clare'
+    },
+    {
+        name: 'A Máscara de Prata - Vol4',
+        desc: `
+        Há uma geração, Constantine Madden quase conseguiu o que nenhum outro mago jamais ousou sequer tentar: trazer os mortos de volta à vida. Mas o "quase" não teve um peso tão ruim. Afinal, ele foi capaz de se manter vivo, dentro de uma criança chamada Callum Hunt.
+        <br/><br/>
+        Agora Call é um dos mais temidos estudantes da história do Magisterium, conhecido como o Inimigo da Morte, o Suserano do Mal, considerado culpado pela morte do melhor amigo e estopim de uma constante ameaça de guerra. Como resultado, o menino foi aprisionado e interrogado.
+        <br/><br/>
+        Todos querem saber as intenções em sua alma. Os planos de Constantine. Mas Call não faz ideia. E quando ele é libertado da prisão por aliados improváveis, interessados em seu poder sobre a magia do caos, ele se vê envolto em uma trama de mentiras e intrigas, e precisa decidir o que fazer com o próprio poder.
+        `,
+        genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
+        img: 'Magisterium-A_Máscara_de_Prata.png',
+        pdf: 'Magisterium-A_Máscara_de_Prata.pdf',
+        rate: '8',
+        author: 'Holly Black & Cassandra Clare'
+    },
+    {
+        name: 'A Torre de Ouro - Vol5',
+        desc: `
+        O volume final, emocionante desta extraordinária série das autores best-sellers Holly Black e Cassandra Clare.
+        <br/><br/>
+        Uma geração atrás, o poderoso mago Constantine Madden chegou perto de alcançar o que nenhum mago jamais alcançou: a capacidade de trazer de volta os mortos. Ele não teve sucesso... mas ele encontrou uma maneira de se manter vivo, dentro de uma criança chamada Callum Hunt.
+        <br/><br/>
+        Diante do que ele é, Callum lutou contra o caos e o mal ao longo de quatro anos de treinamento mágico no Magisterium, derrotando os exércitos do caos em uma batalha épica.
+        <br/><br/>
+        Isso veio com um custo.
+        <br/><br/>
+        Agora, triunfante e de coração partido, Callum Hunt quase teve o suficiente, e está pronto para completar seu treinamento. Mas o mal que Callum enfrentou não desistiu ainda...
+        `,
+        genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
+        img: 'Magisterium-A_Torre_de_Ouro.png',
+        pdf: 'Magisterium-A_Torre_de_Ouro.pdf',
+        rate: '8',
+        author: 'Holly Black & Cassandra Clare'
+    },
+    {
+        name: 'Diário de um Banana',
+        desc: `
+        Não é fácil ser criança. E ninguém sabe disso melhor do que Greg Heffley, que se vê mergulhado no ensino fundamental, onde fracotes subdesenvolvidos dividem os corredores com garotos mais altos, mais malvados e que já se barbeiam. Em Diário de um Banana, Greg nos conta as desventuras de sua vida escolar.
+        <br/><br/>
+        Em busca de um pouco de popularidade (e também de um pouco de proteção), o garoto se envolve em uma série de situações que procura resolver de uma maneira muito particular. No primeiro livro da coleção, o autor e ilustrador Jeff Kinney nos apresenta um herói improvável e encantador. Um garoto comum às voltas com os desafios da puberdade
+        `,
+        genre: ['Comedy', 'Humor', 'Fiction'],
+        img: 'Diario_de_um_banana.png',
+        rate: '8',
+        author: 'Jeff Kinney'
+    },
 ]
 
 /*

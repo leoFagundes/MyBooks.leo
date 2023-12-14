@@ -18,6 +18,7 @@ interface BooksDisplayInterface {
   selectedGenre: string;
   handleBookClick: (bookId: string) => void;
   flippedCards: string[];
+  setSelectedGenre: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function BooksDisplay({
@@ -26,6 +27,7 @@ export default function BooksDisplay({
   selectedGenre,
   handleBookClick,
   flippedCards,
+  setSelectedGenre,
 }: BooksDisplayInterface) {
   const [isModalOpen, setModalOpen] = useState(false);
   const [descToModal, setDescToModal] = useState('')
@@ -49,6 +51,16 @@ export default function BooksDisplay({
 
   return (
     <SectionContainer>
+      <img className="bookHeartImage" src="images/bookHeart.png" alt="favoriteBooks" onClick={() => setSelectedGenre('Favorite')} />
+      {selectedGenre == 'Favorite' ? (
+        <div className="titleBooksFavorites">
+          <Title color="black">
+            Meus Livros Favoritos
+          </Title>
+          <img src="images/bookHeart.png" style={{ height: '80px' }} alt="favoriteBooks" />
+        </div>
+      ) :
+        ''}
       {sortedBooks.map((livro) => (
         <div key={livro.name}>
           {isModalOpen && (

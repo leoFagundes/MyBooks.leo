@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const FilterSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`
+
 export const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
@@ -8,11 +21,6 @@ export const HeaderContainer = styled.header`
 
   h1 {
     margin-bottom: 5px;
-
-    svg {
-      position: relative;
-      top: 7px;
-    }
   }
 
   & > p {
@@ -25,11 +33,6 @@ export const HeaderContainer = styled.header`
   @media screen and (max-width: 675px) {
     h1 {
       font-size: 180%;
-
-      svg {
-        margin-bottom: -10px;
-        scale: 0.7;
-      }
     }
 
     p {
@@ -39,13 +42,6 @@ export const HeaderContainer = styled.header`
 
   @media screen and (max-width: 420px) {
     width: 95%;
-
-      h1 {
-
-      svg {
-        display: none;
-      }
-    }
   }
 `;
 
@@ -135,9 +131,50 @@ export const SectionContainer = styled.section<{
     color: black;
     padding: ${(props) => props.padding || '20px'};
     box-shadow: inset 0 0 60px #00000073;
+    position: relative;
+
+    .bookHeartImage {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 150px;
+      transform: rotate(25deg) translate(40px, -80px);
+
+      &:hover {
+        cursor: pointer;
+        animation: shake 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+      }
+    }
+
+    .titleBooksFavorites {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      h1 {
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+    .bookHeartImage {
+      display: none;
+    }
+  }
 
     @media screen and (max-width: 420px) {
       width: 95%;
+    }
+
+    @keyframes shake {
+      0%, 100% {
+        transform: rotate(23deg) translate(40px, -80px);;
+      }
+      50% {
+        transform: rotate(27deg) translate(40px, -80px);;
+      }
     }
   `;
 
@@ -146,6 +183,7 @@ export const DivFilterContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     min-width: 320px;
+    max-width: 100%;
     background-color: #2c2c2ca2;
     border-radius: 20px;
     box-shadow: 0 0 10px #afafaf71;
