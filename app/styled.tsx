@@ -140,6 +140,7 @@ export const SectionContainer = styled.section<{
       width: 150px;
       height: 150px;
       transform: rotate(25deg) translate(40px, -80px);
+      z-index: 2;
 
       &:hover {
         cursor: pointer;
