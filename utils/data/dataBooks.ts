@@ -20,7 +20,7 @@ export const dataBooks: BookData[] = [
         <br/><br/>
         Em Verity, Colleen Hoover se afasta do estilo que a consagrou, os romances, para se aventurar em um suspense psicológico que deixou todo o mercado editorial sem palavras de tão avassalador. Através de uma narrativa perturbadora e chocante, Verity explora o lado mais sombrio das relações humanas deixando uma surpresinha chocante no final.
         `,
-        genre: ['Romance', 'Fiction', 'Mystery', 'Suspense', 'Adult', 'Favorite'],
+        genre: ['Romance', 'Fiction', 'Mystery', 'Suspense', 'Adult', 'Drama', 'Favorite'],
         img: 'verity.png',
         pdf: 'verity.pdf',
         rate: '10',
@@ -496,6 +496,19 @@ export const dataBooks: BookData[] = [
         img: 'ratoburguer.png',
         rate: '7',
         author: 'David Walliams'
+    },
+    {
+        name: 'O Milagre da Manhã',
+        desc: `
+        Conheça o método simples e eficaz que vai proporcionar a vida dos sonhos — antes das 8 horas da manhã! Hal Elrod explica os benefícios de acordar cedo e desenvolver todo o nosso potencial e as nossas habilidades. 
+        <br/><br/>
+        O milagre da manhã permite que o leitor alcance níveis de sucesso jamais imaginados, tanto na vida pessoal quanto profissional. A mudança de hábitos e a nova rotina matinal proposta por Hal vai proporcionar melhorias significativas na saúde, na felicidade, nos relacionamentos, nas finanças, na espiritualidade ou quaisquer outras áreas que necessitem ser aprimoradas.
+        `,
+        genre: ['Self-Help', 'Motivation'],
+        img: 'O_Milagre_da_Manhã.png',
+        pdf: 'O_Milagre_da_Manhã.pdf',
+        rate: '8',
+        author: 'Hal Elrod'
     },
 ]
 
