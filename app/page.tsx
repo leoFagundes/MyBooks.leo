@@ -44,8 +44,7 @@ export default function Home() {
       </Title>
       <p>
         <i>
-          Repositório feito para armazenar e organizar os livros que já li ao
-          longo da minha vida
+         Bem-vindo à minha biblioteca, onde eu guardo os livros que um dia já li <br/><span style={{fontSize: '14px'}}>(pelo menos os que eu não esqueci)</span>.
         </i>
       </p>
       <FilterSection>

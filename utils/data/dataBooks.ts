@@ -41,10 +41,10 @@ export const dataBooks: BookData[] = [
         - Assegurar uma renda para o futuro;<br/><br/>
         - E, sobretudo, cultivar as próprias aptidões, tornando-se cada vez mais consciente e habilidoso.
         `,
-        genre: ['Economics', 'Financial education', 'Investments', 'Self-Help', 'Classics'],
+        genre: ['Economics', 'Financial education', 'Investments', 'Self-Help', 'Classics', 'Favorite'],
         img: 'O_homem_mais_rico_da_Babilonia.png',
         pdf: 'O_homem_mais_rico_da_Babilonia.pdf',
-        rate: '9',
+        rate: '10',
         author: 'George S Clason'
     },
     {
@@ -171,6 +171,81 @@ export const dataBooks: BookData[] = [
         author: 'Rick Riordan'
     },
     {
+        name: 'Percy Jackson - O Herói Perdido - Vol1',
+        desc: `
+        Esse é o primeiro volume da ordem de livros de Os Heróis do Olimpo de Rick Riordan.
+        <br/><br/>
+        Jason Grace acorda em um ônibus repleto de jovens desconhecidos, ele não faz ideia do que faz ali, todo o seu passado tinha sido apagado de sua memória. Junto com ele estão Piper e Leo, sua namorada e melhor amigo, respectivamente. Ele está tentando entender o que está havendo quando algo os ataca e em meio a essa luta muitas coisas são reveladas, logo em seguida eles conhecem Annabeth, ela estava indo até lá na esperança de encontrar Percy, que está desaparecido.
+        <br/><br/>
+        eva para um lugar chamado acampamento meio-sangue, onde eles conhecem novos campistas. Neste lugar todos dizem ser “semideuses”, que significa filhos de deuses com humanos, mais especificamente, deuses gregos. Tudo parece uma grande loucura e só piora quando o grande Oráculo revela uma profecia envolvendo sete semideuses e uma batalha final, onde tudo acabaria de um jeito ou de outro. Juntos eles embarcam em uma aventura atrás de respostas.
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '1-Percy_Jackson_o_heroi_perdido.png',
+        pdf: '1-Percy_Jackson_o_heroi_perdido.pdf',
+        rate: '8',
+        author: 'Rick Riordan'
+    },
+    {
+        name: 'Percy Jackson - O Filho de Netuno - Vol2',
+        desc: `
+        Esse é o segundo volume da ordem deos livros de Os Heróis do Olimpo de Rick Riordan.
+        <br/><br/>
+        Percy Jackson acorda de um sono profundo não se lembrando de nada além de seu próprio nome e o nome de alguém que parece ser importante: Annabeth. Ao acordar, se depara com uma loba chamada Lupa. Ela conta que ele é um semideus e o ensina a usar uma espada, na verdade uma caneta/espada, sua inseparável contracorrente, da qual ele não se lembrava que existia.
+        <br/><br/>
+        Ele acaba chegando em uma acampamento de semideuses, onde mais tarde ele descobre ser um acampamento romano. Lá ele conhece dois jovens campistas, seus novos amigos Hazel e Frank. Percy descobre mais tarde, que o deus da morte, Tânatos, está aprisionado e que Gaia está formando um exército para ajudá-la a se reerguer e refazer o mundo de acordo com suas regras. Juntos eles terão que enfrentar novos desafios e um lugar congelante os aguarda em sua primeira missão.
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '2-Percy_Jackson_O_Filho_de_Netuno.png',
+        pdf: '2-Percy_Jackson_O_Filho_de_Netuno.pdf',
+        rate: '7',
+        author: 'Rick Riordan'
+    },
+    {
+        name: 'Percy Jackson - A Marca de Atena - Vol3',
+        desc: `
+        Esse é o terceiro volume da ordem dos livros de Os Heróis do Olimpo de Rick Riordan.
+        <br/><br/>
+        Annabeth se vê arrasada quando percebe que Percy desapareceu e ainda mais frustrada por não fazer ideia de onde ele poderia estar, já que sua última pista só tinha a levado para mais problemas. Junto de seus novos amigos Jason, Piper e Leo, ela navega a bordo do Argo II, um navio feito por Leo, rumo ao acampamento Júpiter, lá ela espera reencontrar Percy e talvez conhecer os outros semideuses da profecia dos sete.
+        <br/><br/>
+        O problema é que ela não sabe nada sobre o acampamento Júpiter, e eles igualmente, não sabem nada sobre os viajantes desconhecidos. Os romanos se preparam para guerrear contra os novos inimigos, tudo precisa ser esclarecido depressa antes que algo muito ruim aconteça. Parecendo não ter problemas suficientes, a mãe de Annabeth, a deusa Atena, deixou um presente para ela com uma missão: Siga a marca de Atena, vingue-me. Só o tempo vai dizer como tudo vai acabar, ela só sabe de uma coisa, ela precisa agir rápido.
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '3-Percy_Jackson_a_marca_de_atena.png',
+        pdf: '3-Percy_Jackson_a_marca_de_atena.pdf',
+        rate: '7',
+        author: 'Rick Riordan'
+    },
+    {
+        name: 'Percy Jackson - A Casa de Hades - Vol4',
+        desc: `
+        Esse é o quarto volume da ordem dos livros de Os Heróis do Olimpo de Rick Riordan.
+        <br/><br/>
+        As coisas não param de dar errado, dois de nossos heróis terão que enfrentar um lugar temido por todos, um lugar de morte, o perigoso Tártaro. Nessa eletrizante jornada, eles irão enfrentar novos perigos e precisarão de toda a ajuda possível para impedir Gaia de se libertar de sua prisão.
+        <br/><br/>
+        O Tártaro não é lugar para os fracos, passando fome e sede, eles lutam para sobreviver, conhecendo novos personagens que serão essenciais no caminho. Enquanto isso, os outros semideuses tentam ajudar os amigos a sair, seguindo a profecia, que ainda lhes parece uma incógnita. Todos precisam agir rápido ou será tarde demais.
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '4-Percy_Jackson_a_casa_de_hades.png',
+        pdf: '4-Percy_Jackson_a_casa_de_hades.pdf',
+        rate: '6',
+        author: 'Rick Riordan'
+    },
+    {
+        name: 'Percy Jackson - O Sangue do Olimpo - Vol5',
+        desc: `
+        Esse é o quinto volume da ordem dos livros de Os Heróis do Olimpo de Rick Riordan.
+        <br/><br/>
+        No último livro da saga, Percy, Annabeth, Jason, Piper, Leo, Hazel e Frank precisam da ajuda de todos para enfrentarem o pior inimigo que já tiveram, a poderosa mãe terra. Ao mesmo tempo em que uma guerra entre acampamentos se aproxima e apenas uma antiga estátua, Atena Partenos, é capaz de mudar o rumo da história, impedindo uma guerra devastadora entre dois mundos. Um antigo personagem é inserido na história, e com ele revelações que deixarão os leitores chocados.
+        <br/><br/>
+        Nico di Angelo ganha destaque na história e um espaço de fala importante na narrativa, tendo sua perspectiva mostrada, ele insere novos segredos nunca revelados. Preso dentro de si, ele luta contra os próprios sentimentos a muito tempo reprimidos. Na batalha final, vemos todos reunidos, deuses, semideuses, monstros e outros seres míticos, personagens antigos e novos, todos juntos para combater o mal. Tudo está em jogo e muitos serão os sacrifícios para se alcançar a vitória. O último livro é um dos mais tensos, misturando alegria e tristeza, raiva e drama, o desfecho de toda uma era reunida em uma só narrativa. 
+        `,
+        genre: ['Adventure', 'Fantasy', 'Mythology'],
+        img: '5-Percy_Jackson_o_sangue_do_olimpo.png',
+        pdf: '5-Percy_Jackson_o_sangue_do_olimpo.pdf',
+        rate: '8',
+        author: 'Rick Riordan'
+    },
+    {
         name: 'Saldo Positivo: Como Ficar Sempre no Azul',
         desc: `
         Qualquer pessoa pode conseguir alcançar a independência financeira. Poucas são as pessoas que já não se viram, pelo menos uma vez na vida, angustiadas por não conseguirem fazer o salário durar até o fim do mês.
@@ -281,7 +356,7 @@ export const dataBooks: BookData[] = [
         genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
         img: 'Magisterium-A_Luva_de_Cobre.png',
         pdf: 'Magisterium-A_Luva_de_Cobre.pdf',
-        rate: '8',
+        rate: '9',
         author: 'Holly Black & Cassandra Clare'
     },
     {
@@ -300,7 +375,7 @@ export const dataBooks: BookData[] = [
         genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
         img: 'Magisterium-A_Chave_de_Bronze.png',
         pdf: 'Magisterium-A_Chave_de_Bronze.pdf',
-        rate: '8',
+        rate: '9',
         author: 'Holly Black & Cassandra Clare'
     },
     {
@@ -315,7 +390,7 @@ export const dataBooks: BookData[] = [
         genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
         img: 'Magisterium-A_Máscara_de_Prata.png',
         pdf: 'Magisterium-A_Máscara_de_Prata.pdf',
-        rate: '8',
+        rate: '9',
         author: 'Holly Black & Cassandra Clare'
     },
     {
@@ -334,7 +409,7 @@ export const dataBooks: BookData[] = [
         genre: ['Fantasy', 'Adventure', 'Magic', 'Mystery', 'Fiction'],
         img: 'Magisterium-A_Torre_de_Ouro.png',
         pdf: 'Magisterium-A_Torre_de_Ouro.pdf',
-        rate: '8',
+        rate: '9',
         author: 'Holly Black & Cassandra Clare'
     },
     {
@@ -346,12 +421,86 @@ export const dataBooks: BookData[] = [
         `,
         genre: ['Comedy', 'Humor', 'Fiction'],
         img: 'Diario_de_um_banana.png',
-        rate: '8',
+        rate: '7',
         author: 'Jeff Kinney'
+    },
+    {
+        name: 'A Arte da Guerra',
+        desc: `
+        “Se você conhece o inimigo e conhece a si mesmo, não precisa temer o resultado de cem batalhas. Se você se conhece, mas não conhece o inimigo, para cada vitória grande, sofrerá também uma derrota. Se você não conhece nem o inimigo e nem a si mesmo, perderá todas as batalhas…”
+        <br/><br/>
+        A arte da guerra é sem dúvida a bíblia da estratégia, sendo utilizada amplamente no mundo dos negócios, conquistando pessoas e mercados. Na paz, preparar-se para a guerra; na guerra, preparar-se para a paz. A arte da guerra é de importância vital para o Estado. É uma questão de vida ou morte, um caminho tanto para a segurança como para a ruína. Assim, em nenhuma circunstância deve ser negligenciada.
+        <br/><br/>
+        Desta maneira começa o notável documento chinês, escrito há cerca de 2500 anos, no qual é registrada a sabedoria de Sun Tzu, filósofo que se tornou general. Os conselhos de Sun Tzu podem ser usados de diferentes formas e para diversos campos do conhecimento humano. São muito úteis, principalmente, para jovens executivos e empreendedores, assim como para chefes de Estado e comandantes.
+        <br/><br/>
+        Em A arte da guerra, são discutidos todos os aspectos da guerra – táticos, hierárquicos e humanos, entre outros – numa linguagem tão poética quanto didática. James Clavell, autor de prestígio mundial, assina o prefácio, onde cita alguns preceitos do livro e os contextualiza em nosso cotidiano. Uma obra para ser lida não apenas por todo comandante ou oficial, mas por qualquer pessoa interessada na paz. Não surpreende que o livro seja citado em filmes e constantemente aplicado para solucionar os mais recentes conflitos do nosso dia-a-dia.
+        `,
+        genre: ['Military Strategy', 'Philosophy', 'Classics'],
+        img: 'A_arte_da_guerra.png',
+        pdf: 'A_arte_da_guerra.pdf',
+        rate: '8',
+        author: 'Sun Tzu'
+    },
+    {
+        name: 'Warcraft: Livro do Filme Oficial',
+        desc: `
+        A novelização do aguardado filme de ação e fantasia Warcraft Há muito Azeroth está em paz. Após expulsar os trolls, com a ajuda de Medivh, Guardião do reino, humanos vivem em paz com os vizinhos elfos e anões. Mas um novo mal desponta no horizonte, e a guerra ameaça engolfar mais uma vez os domínios do justo rei Llane. Uma raça temerária de invasores, os guerreiros orcs, insuflados pelo feiticeiro Guldan e liderados pelo monstruoso Mão Negra, fogem de seu mundo agonizante em busca de caça e oportunidades.
+        <br/><br/>
+        Com a ajuda da vileza, a mais cruel das magias, Guldan criou um portal capaz de transportar sua Horda até Azeroth. A maré verde, de orcs dominados por esse mal, toma de assalto as terras humanas. Morte e destruição ameaçam destruir a tudo e a todos. Então, de lados opostos, dois heróis surgem, em uma rota de colisão que decidirá o destino de sua família, seu povo e seu lar. Durotan, o líder honrado do clã Lobo do Gelo, quer apenas uma chance para seu filho recém-nascido. Lothar, o Leão de Azeroth, busca redenção. E assim começa uma espetacular saga sobre poder e sacrifício, na qual a guerra tem muitas facetas e todos lutam por algo.
+        `,
+        genre: ['Adventure', 'Fantasy'],
+        img: 'warcraft_livro_do_filme.png',
+        rate: '7',
+        author: 'Ducan Jones'
+    },
+    {
+        name: 'O Príncipe - Nicolau Maquiavel',
+        desc: `
+        Nesta obra, que é um clássico sobre pensamento político, o grande escritor Maquiavel mostra como funciona a ciência política.
+        <br/><br/>
+        Discorre sobre os diferentes tipos de Estado e ensina como um príncipe pode conquistar e manter o domínio sobre um Estado.
+        <br/><br/>
+        Trata daquilo que é o seu objetivo principal: as virtudes que o governante deve adquirir e os vícios que deve evitar para manter-se no poder.
+        <br/><br/>
+        Maquiavel mostra em O Príncipe que a moralidade e a ciência política são separadas.
+        <br/><br/>
+        Ele aponta a contradição entre governar um Estado e, ao mesmo tempo, levar uma vida moral.
+        `,
+        genre: ['Political', 'Classics'],
+        img: 'o_principe_nicolau_maquiavel.png',
+        pdf: 'o_principe_nicolau_maquiavel.pdf',
+        rate: '7',
+        author: 'Nicolau Maquiavel'
+    },
+    {
+        name: 'O Menino do Pijama Listrado',
+        desc: `
+        Bruno tem nove anos e não sabe nada sobre o Holocausto e a Solução Final contra os judeus. Também não faz idéia que seu país está em guerra com boa parte da Europa, e muito menos que sua família está envolvida no conflito. Na verdade, Bruno sabe apenas que foi obrigado a abandonar a espaçosa casa em que vivia em Berlim e a mudar-se para uma região desolada, onde ele não tem ninguém para brincar nem nada para fazer. Da janela do quarto, Bruno pode ver uma cerca, e para além dela centenas de pessoas de pijama, que sempre o deixam com frio na barriga.
+        <br/><br/>
+        Em uma de suas andanças Bruno conhece Shmuel, um garoto do outro lado da cerca que curiosamente nasceu no mesmo dia que ele. Conforme a amizade dos dois se intensifica, Bruno vai aos poucos tentando elucidar o mistério que ronda as atividades de seu pai. O menino do pijama listrado é uma fábula sobre amizade em tempos de guerra, e sobre o que acontece quando a inocência é colocada diante de um monstro terrível e inimaginável.
+        `,
+        genre: ['Historical Fiction', 'Drama', 'Young Adult', 'War'],
+        img: 'O_menino_do_pijama_listrado.png',
+        pdf: 'O_menino_do_pijama_listrado.pdf',
+        rate: '8',
+        author: 'John Boyne'
+    },
+    {
+        name: 'Ratobúrguer',
+        desc: `
+        Em Ratobúrguer, a protagonista Zoe tem uma vida triste: não tem amigos, não conta sequer com a simpatia da madrasta, e seu único companheiro, seu hamster de estimação, morreu. O pai dela está desempregado e passa o dia no bar. E, para piorar, ela também enfrenta uma rotina difícil na escola, pois o hobby favorito da valentona, Tina Trotts, é atormentá-la.
+        <br/><br/>
+        Ao encontrar embaixo de sua cama um filhote de rato muito inteligente, Armitage, Zoe acredita que sua vida vai melhorar. Ela resolve adestrá-lo, ensina truques incríveis a ele e sonha em torná-lo um grande dançarino de break. Um novo vilão, porém, chega à cidade: Burt, um assustador vendedor de hambúrgueres que usa carne de rato para cozinhar. Armitage, então, torna-se seu alvo, e agora cabe a Zoe salvar seu melhor amigo.
+        `,
+        genre: ['Humor', 'Adventure', 'Fantasy'],
+        img: 'ratoburguer.png',
+        rate: '7',
+        author: 'David Walliams'
     },
 ]
 
 /*
+Template
 {
     name: 'teste4',
     desc: `
