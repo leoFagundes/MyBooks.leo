@@ -510,6 +510,19 @@ export const dataBooks: BookData[] = [
         rate: '8',
         author: 'Hal Elrod'
     },
+    {
+        name: 'O Pequeno Príncipe',
+        desc: `
+        Nesta história que marcou gerações de leitores em todo o mundo, um piloto cai com seu avião no deserto do Saara e encontra um pequeno príncipe, que o leva a uma aventura filosófica e poética através de planetas que encerram a solidão humana.
+        <br/><br/>
+        livro para todos os públicos, O pequeno príncipe é uma obra atemporal, com metáforas pertinentes e aprendizados sobre afeto, sonhos, esperança e tudo aquilo que é invisível aos olhos. 
+        `,
+        genre: ['Fable', 'Fantasy', 'Philosophy', 'Classics'],
+        img: 'O_pequeno_principe.png',
+        pdf: 'O_pequeno_principe.pdf',
+        rate: '7',
+        author: 'Antoine de Saint-Exupéry'
+    },
 ]
 
 /*
