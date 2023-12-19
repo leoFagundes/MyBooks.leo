@@ -66,7 +66,7 @@ export default function BooksDisplay({
           {isModalOpen && (
             <Modal onClose={() => setModalOpen(false)}>
               {/* Conteúdo do modal, como a descrição do livro */}
-              <p dangerouslySetInnerHTML={{ __html: descToModal }} />
+              {descToModal}
             </Modal>
           )}
           {livro.name.toLowerCase().includes(inputValue.toLowerCase()) &&

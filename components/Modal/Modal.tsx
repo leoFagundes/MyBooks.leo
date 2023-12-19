@@ -8,7 +8,7 @@ const ModalOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(75, 75, 75, 0.1);
+  background-color: rgba(3, 3, 3, 0.05);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,15 +20,18 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background: #fff;
+  background-color: #eeeeee;
+  background-image: url('images/paperBG2.jpg');
+  background-size: cover;
   padding: 10px 20px;
   border-radius: 10px;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 20px rgba(0, 0, 0, 0.8);
   max-height: 80vh;
   overflow-y: scroll;
   z-index: 11;
+  white-space: pre-line;
 
   & {
     cursor: default;
@@ -36,23 +39,7 @@ const ModalContent = styled.div`
 
   /* Scrollbar vertical */
   &::-webkit-scrollbar {
-    width: 7px; /* Largura da barra de rolagem vertical */
-  }
-    
-  /* Alça da barra de rolagem */
-  &::-webkit-scrollbar-thumb {
-    background-color: #666666;
-    border-radius: 1px; 
-  }
-
-  /* Barra de rolagem de fundo */
-  &::-webkit-scrollbar-track {
-    background-color: #cfcfcf;
-  }
-
-  /* Estilizar a alça quando o mouse passar por cima */
-  &::-webkit-scrollbar-thumb:active {
-    background-color: rgb(151, 151, 151);
+    display: none;
   }
 `;
 
@@ -76,7 +63,7 @@ const Modal = ({ children, onClose }: any) => {
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={handleDownloadClick}>
         <CloseButton onClick={onClose}><IoCloseCircleOutline size={30} color={'#fff'} /></CloseButton>
-        <strong>Sinopse</strong><br/>
+        <strong>Sinopse</strong><br />
         <strong>{children}</strong>
       </ModalContent>
     </ModalOverlay>
