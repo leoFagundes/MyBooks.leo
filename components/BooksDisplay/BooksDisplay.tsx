@@ -99,7 +99,7 @@ export default function BooksDisplay({
                     <div onClick={() => openModal(livro.desc)}>
                       <BiExpand color={'#fff'} size={15} />
                     </div>
-                    <p dangerouslySetInnerHTML={{ __html: livro.desc }} />
+                    <p style={{ whiteSpace: 'pre-line' }}>{livro.desc}</p>
                   </div>
 
                   <section
