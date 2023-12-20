@@ -6,6 +6,7 @@ export interface BookData {
     pdf?: string;
     rate: string;
     author: string;
+    link?: string;
   }
 
 export const dataBooks: BookData[] = [
@@ -491,13 +492,25 @@ export const dataBooks: BookData[] = [
         rate: '7',
         author: 'Antoine de Saint-Exupéry'
     },
+    {
+        name: 'eBook Front-End - eFront',
+        desc: `Um ebook completo que te leva do zero ao nível mais avançado como dev frontend.
+
+        "Meu nome é Iuri e sou o criador do eFront, um material de ensino de frontend pela internet. Passei por toda dificuldade de encontrar materiais adaptados para entrar no mercado, e hoje, me dedico a produção de conteúdo de frontend para ajudar o maior número de pessoas possível a aprender."
+        `,
+        genre: ['Front-End', 'Programação'],
+        img: 'eFront.png',
+        rate: '9',
+        author: 'Iuri Silva - iuricode',
+        link: 'https://iuricode.com/efront/'
+    },
 ]
 
 /*
 Template
 {
     name: 'teste4',
-    desc: 
+    desc: `
     `,
     genre: ['teste'],
     img: 'teste',

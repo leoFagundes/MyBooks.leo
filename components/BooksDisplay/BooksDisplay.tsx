@@ -134,11 +134,11 @@ export default function BooksDisplay({
                   </section>
 
                   <a
-                    href={`pdf/books/${livro.pdf}`}
+                    href={`${livro.link ? livro.link : 'pdf/books/' + livro.pdf}`}
                     onClick={(e) => handleDownloadClick(e)}
                     target="_blank"
                   >
-                    <button>{livro.pdf ? 'Download' : 'Indisponível'}</button>
+                    <button>{livro.link ? 'Acessar' : (livro.pdf ? 'Download' : 'Indisponível')}</button>
                   </a>
                 </Back>
               </Card>
