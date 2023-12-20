@@ -7,6 +7,7 @@ import { FilterSection, HeaderContainer } from "./styled";
 import InputFilter from "@/components/filterComponent/InputFilter";
 import OutPutFilter from "@/components/filterComponent/OutPutFilter";
 import BooksDisplay from "@/components/BooksDisplay/BooksDisplay";
+import ScrollUp from "@/components/ScrollUp/ScrollUp";
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
@@ -26,8 +27,10 @@ export default function Home() {
 
   useEffect(() => {
     setFilterValue(
-      `<strong>Contém:</strong> ${inputValue ? inputValue : "Empty Value"
-      }</br><strong>Gênero:</strong> ${selectedGenre ? selectedGenre : "Empty Value"
+      `<strong>Contém:</strong> ${
+        inputValue ? inputValue : "Empty Value"
+      }</br><strong>Gênero:</strong> ${
+        selectedGenre ? selectedGenre : "Empty Value"
       }`
     );
   }, [inputValue, selectedGenre]);
@@ -44,7 +47,12 @@ export default function Home() {
       </Title>
       <p>
         <i>
-         Bem-vindo à minha biblioteca, onde eu guardo os livros que um dia já li <br/><span style={{fontSize: '14px'}}>(pelo menos os que eu não esqueci)</span>.
+          Bem-vindo à minha biblioteca, onde eu guardo os livros que um dia já
+          li <br />
+          <span style={{ fontSize: "14px" }}>
+            (pelo menos os que eu não esqueci)
+          </span>
+          .
         </i>
       </p>
       <FilterSection>
@@ -54,7 +62,8 @@ export default function Home() {
             setInputValue={setInputValue}
             selectedGenre={selectedGenre}
             setSelectedGenre={setSelectedGenre}
-            uniqueGenres={uniqueGenres} />
+            uniqueGenres={uniqueGenres}
+          />
           <OutPutFilter filterValue={filterValue} />
         </div>
       </FilterSection>
@@ -63,9 +72,10 @@ export default function Home() {
         inputValue={inputValue}
         selectedGenre={selectedGenre}
         handleBookClick={handleBookClick}
-        flippedCards={flippedCards} 
+        flippedCards={flippedCards}
         setSelectedGenre={setSelectedGenre}
       />
+      <ScrollUp />
     </HeaderContainer>
   );
 }
