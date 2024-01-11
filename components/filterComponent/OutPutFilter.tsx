@@ -3,8 +3,9 @@ import React from 'react'
 import { Title } from '../styledComponents/Title.styled'
 
 export default function OutPutFilter({ filterValue }: { filterValue: string }) {
+
   return (
-    <DivFilterContainer>
+    <DivFilterContainer title='Remover Filtros'>
       <Title
         fontFamily="'Hedvig Letters Serif', serif;"
         fontSize="150%"

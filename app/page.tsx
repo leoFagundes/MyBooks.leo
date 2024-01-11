@@ -27,10 +27,8 @@ export default function Home() {
 
   useEffect(() => {
     setFilterValue(
-      `<strong>Contém:</strong> ${
-        inputValue ? inputValue : "Empty Value"
-      }</br><strong>Gênero:</strong> ${
-        selectedGenre ? selectedGenre : "Empty Value"
+      `<strong>Contém:</strong> ${inputValue ? inputValue : "Empty Value"
+      }</br><strong>Gênero:</strong> ${selectedGenre ? selectedGenre : "Empty Value"
       }`
     );
   }, [inputValue, selectedGenre]);
@@ -64,7 +62,12 @@ export default function Home() {
             setSelectedGenre={setSelectedGenre}
             uniqueGenres={uniqueGenres}
           />
-          <OutPutFilter filterValue={filterValue} />
+          <div onClick={() => {
+            setInputValue('')
+            setSelectedGenre('')
+          }}>
+            <OutPutFilter filterValue={filterValue} />
+          </div>
         </div>
       </FilterSection>
       <BooksDisplay

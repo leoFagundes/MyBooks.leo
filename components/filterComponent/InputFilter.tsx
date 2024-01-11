@@ -12,7 +12,7 @@ interface FilterIntarface {
 export default function InputFilter({ inputValue, setInputValue, selectedGenre, setSelectedGenre, uniqueGenres }: FilterIntarface) {
     // Ordena os gêneros alfabeticamente
     const sortedGenres = [...uniqueGenres].sort((a, b) => a.localeCompare(b));
-    
+
     return (
         <InputContainer>
             <div>

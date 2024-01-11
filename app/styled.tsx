@@ -4,12 +4,20 @@ export const FilterSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 
   & > div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+
+  @media screen and (max-width: 690px) {
+    & > div {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -48,12 +56,12 @@ export const HeaderContainer = styled.header`
 export const InputContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px 50px;
   row-gap: 10px;
   column-gap: 50px;
-  margin-top: 20px;
 
   .inputSearchPage {
     display: flex;
@@ -183,22 +191,34 @@ export const DivFilterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 320px;
-  max-width: 100%;
-  background-color: #2c2c2ca2;
+  width: 320px;
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: #2c2c2c7b;
+  outline: 1px solid transparent;
+  box-shadow: 0 0 5px #dddddd44;
   border-radius: 20px;
-  box-shadow: 0 0 10px #afafaf71;
   padding: 5px;
   margin: 15px 0 0 0;
 
+  &:hover {
+    outline: 1px solid #ffffff97;
+    background-color: #2c2c2c36;
+    transition: 0.3s ease-in-out;
+    box-shadow: transparent;
+    cursor: pointer;
+  }
+
   h1 {
     margin: 0;
+    font-size: 20px;
     align-self: center;
   }
 
   p {
     align-self: flex-start;
-    font-size: 18px;
+    font-size: 16px;
     padding-left: 15px;
   }
 

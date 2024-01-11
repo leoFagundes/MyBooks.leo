@@ -11,8 +11,9 @@ const ScrollUpContainer = styled.div<{ visible: boolean }>`
   transition: opacity 0.3s ease-in-out;
 
   &:hover {
-    cursor: pointer;
-    filter: drop-shadow(0 0 10px #ffffffac);
+    cursor: ${(props) => (props.visible ? "pointer" : "default")};
+    filter: drop-shadow(0 0 10px #ffffff4b);
+
   }
 `;
 
