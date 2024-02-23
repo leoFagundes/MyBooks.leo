@@ -221,9 +221,13 @@ export const DivFilterContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 24px;
+    margin-top: 30px;
     width: 100%;
     flex: 1;
+
+    p {
+      padding: 0;
+    }
   }
 
   &:hover {
