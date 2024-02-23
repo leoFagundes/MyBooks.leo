@@ -192,6 +192,7 @@ export const DivFilterContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 320px;
+  min-height: 115px;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: break-all;
@@ -199,8 +200,31 @@ export const DivFilterContainer = styled.div`
   outline: 1px solid transparent;
   box-shadow: 0 0 5px #dddddd44;
   border-radius: 20px;
-  padding: 5px;
+  padding: 15px 5px;
   margin: 15px 0 0 0;
+
+  p {
+    margin: 0;
+    padding: 5px;
+  }
+
+  .filterMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+  }
+
+  .noFilterMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    width: 100%;
+    flex: 1;
+  }
 
   &:hover {
     outline: 1px solid #ffffff97;

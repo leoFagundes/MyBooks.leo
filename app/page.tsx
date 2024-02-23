@@ -9,10 +9,18 @@ import OutPutFilter from "@/components/filterComponent/OutPutFilter";
 import BooksDisplay from "@/components/BooksDisplay/BooksDisplay";
 import ScrollUp from "@/components/ScrollUp/ScrollUp";
 
+type FilterValueType = {
+  name: string;
+  genre: string;
+};
+
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("");
-  const [filterValue, setFilterValue] = useState("");
+  const [filterValue, setFilterValue] = useState<FilterValueType>({
+    name: "",
+    genre: "",
+  });
   const [flippedCards, setFlippedCards] = useState<string[]>([]);
 
   const handleBookClick = (bookId: string) => {
@@ -26,11 +34,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setFilterValue(
-      `<strong>Contém:</strong> ${inputValue ? inputValue : "Empty Value"
-      }</br><strong>Gênero:</strong> ${selectedGenre ? selectedGenre : "Empty Value"
-      }`
-    );
+    setFilterValue({
+      name: inputValue,
+      genre: selectedGenre,
+    });
   }, [inputValue, selectedGenre]);
 
   // Extrai gêneros únicos dos dados dos livros
@@ -62,10 +69,12 @@ export default function Home() {
             setSelectedGenre={setSelectedGenre}
             uniqueGenres={uniqueGenres}
           />
-          <div onClick={() => {
-            setInputValue('')
-            setSelectedGenre('')
-          }}>
+          <div
+            onClick={() => {
+              setInputValue("");
+              setSelectedGenre("");
+            }}
+          >
             <OutPutFilter filterValue={filterValue} />
           </div>
         </div>
