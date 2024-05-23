@@ -31,17 +31,13 @@ export default function Home() {
   }
 
   useEffect(() => {
-    const BackGroundImage = "images/paperBG2.jpg";
+    const BackGroundImage = [
+      "https://mybooksleo.vercel.app/images/paperBG2.jpg",
+    ];
 
     const preloadItemImages = async () => {
       try {
-        const imagePhotos = dataBooks.map(
-          (item: BookData) => `images/books/${item.img}`
-        );
-        console.log(imagePhotos);
-        imagePhotos.push(BackGroundImage);
-        console.log(imagePhotos);
-        preloadImages(imagePhotos);
+        preloadImages(BackGroundImage);
       } catch (error) {
         console.error("Não foi possível pré-carregar as imagens!");
       }
