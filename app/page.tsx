@@ -1,7 +1,7 @@
 "use client";
 
 import { Title } from "@/components/styledComponents/Title.styled";
-import { dataBooks } from "@/utils/data/dataBooks";
+import { BookData, dataBooks } from "@/utils/data/dataBooks";
 import { useEffect, useState } from "react";
 import { FilterSection, HeaderContainer } from "./styled";
 import InputFilter from "@/components/filterComponent/InputFilter";
@@ -22,6 +22,33 @@ export default function Home() {
     genre: "",
   });
   const [flippedCards, setFlippedCards] = useState<string[]>([]);
+
+  function preloadImages(urls: string[]) {
+    urls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
+  }
+
+  useEffect(() => {
+    const BackGroundImage = "images/paperBG2.jpg";
+
+    const preloadItemImages = async () => {
+      try {
+        const imagePhotos = dataBooks.map(
+          (item: BookData) => `images/books/${item.img}`
+        );
+        console.log(imagePhotos);
+        imagePhotos.push(BackGroundImage);
+        console.log(imagePhotos);
+        preloadImages(imagePhotos);
+      } catch (error) {
+        console.error("Não foi possível pré-carregar as imagens!");
+      }
+    };
+
+    preloadItemImages();
+  }, []);
 
   const handleBookClick = (bookId: string) => {
     setFlippedCards((prevFlippedCards) => {
